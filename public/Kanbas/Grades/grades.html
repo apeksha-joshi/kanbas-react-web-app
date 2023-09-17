@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            table.outer-table {
+                border-collapse: separate;
+                border:none;
+            }
+            table.outer-table td {
+                padding: 10px;
+            }
+            table.inner-table table{
+                border-collapse: collapse;
+            }
+            table.inner-table td {
+                padding: 10px;
+                text-align: center;
+            }
+            table.inner-table th {
+                padding: 10px;
+                text-align: center;
+            }
+            
+        </style>
+     </head>
+     <body>
+        <div>
+            <table class="outer-table">
+                <tr>
+                    <td style="vertical-align:top">
+                        <ul>
+                            <li><a href="/Kanbas/Account/Profile/profile.html">Account</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="/Kanbas/Courses/home.html">Courses</a></li>
+                            <li><a href="#">Calendar</a></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Studio</a></li>
+                            <li><a href="#">Commons</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </td>
+                        
+                    <td style="vertical-align:top">
+                        <ul>
+                            <li><a href="/Kanbas/Courses/home.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li><a href="/Kanbas/Assignments/index.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="/Kanbas/Grades/grades.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="/Kanbas/CourseSettings/course-details.html">Settings</a></li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <select name="gradebook">
+                            <option value="Gradebook">Gradebook</option>
+                        </select>
+                        <button type="button">Import</button>
+                        <select name="export">
+                            <option value="Export">Export</option>
+                        </select>
+                        <button type="button">Configure</button>
+                        <br/>
+                        <h3>Student Names</h3>
+                        <input id="student-name" title="student-name" placeholder="Search Students"/>
+
+                        <br/>
+                        <h3>Assignment Names</h3>
+                        <input id="assignment-name" title="assignment-name" placeholder="Search Assignments"/>
+                        <br><br>
+                        <button type="button">Apply Filters</button>
+                        <br><br>
+                        <table border="1" class="inner-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>A1 HTML <br>Out of 100</th>
+                                    <th>A2 CSS <br>Out of 100</th>
+                                    <th>A3 BOOTSTRAP <br>Out of 100</th>
+                                    <th>A4 JAVASCRIPT <br>Out of 100</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luffy</td>
+                                    <td><input style="text-align: center;" max="100" min="0" type="number" value="50" placeholder="0"/></td>
+                                    <td>50</td>
+                                    <td>50</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Zoro</td>
+                                    <td>50</td>
+                                    <td>50</td>
+                                    <td><input style="text-align: center;" max="100" min="0" type="number" value="50" placeholder="0"/></td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Sanji</td>
+                                    <td>90</td>
+                                    <td>90</td>
+                                    <td><input style="text-align: center;" max="100" min="0" type="number" value="90" placeholder="0"/></td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <td>Robin</td>
+                                    <td>98</td>
+                                    <td>98</td>
+                                    <td><input style="text-align: center;" max="100" min="0" type="number" value="95" placeholder="0"/></td>
+                                    <td>93</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+     </body>
+</html>
