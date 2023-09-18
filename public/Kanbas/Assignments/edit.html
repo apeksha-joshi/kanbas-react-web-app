@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Title</title>
+   <title>Edit Assignment</title>
 </head>
 <body>
 <div>
@@ -58,23 +58,20 @@
             <input id="points" name="points" max="100" min="0" value="100">
             <br><br>
             <label for="assignment-group">Assignment Group</label><br>
-            <br>
             <select name="assignment-group" id="assignment-group">
                 <option value="ASSIGNMENTS">ASSIGNMENTS</option>
             </select>
 
             <br><br>
             <label for="display-grade">Display Grade as</label><br>
-            <br>
             <select name="display-grade" id="display-grade">
                 <option value="percentage">Percentage</option>
             </select>
 
             <br><br>
             <label for="submission-type">Submission Type</label><br>
-            <br>
             <select name="submission-type" id="submission-type">
-                <option value="unlimited">Unlimited</option>
+                <option value="online">Online</option>
             </select>
             <br><br>
             <label>Online Entry Options</label><br>
@@ -123,8 +120,10 @@
             <label for="unitl-date">Until</label><br>
             <input type="date" name="until-date" id="unitl-date" value="2023-09-20" min="2023-09-20" />
             <br><br>
-            <a href="/Kanbas/Assignments/index.html"><button type="button">Cancel</button></a>
-            <a href="/Kanbas/Assignments/index.html"><button type="button">Save</button></a>
+            <form action="/Kanbas/Assignments/index.html">
+                <button>Cancel</button>
+                <button>Save</button>
+            </form>
         </td>
     </tr>
 </table>
