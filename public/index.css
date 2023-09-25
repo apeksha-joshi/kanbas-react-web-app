@@ -1,0 +1,380 @@
+:root{
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --main-nav-red-color:#D41B2C;
+    --profile-nav-item-color:#b52828;
+    --profile-line-selected-nav-item:#2d3b45;
+    --profile-header-hr-line:#c7cdd1;
+}
+
+body * {
+  font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;  
+}
+
+
+div {
+    display: block;
+}
+
+.app {
+    box-sizing: border-box;
+    min-height: 100vh; 
+    margin-left: 85px; 
+    padding:0;
+    max-width: 1420px;
+}
+
+.app-navigation{
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85px;
+    z-index: 100;
+    background-color: var(--black-color);
+}
+.neu-logo-container{
+    width: 100%;
+    background-color: var(--black-color);
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+
+.neu-logo{
+    display: block;
+    overflow: hidden;
+    background-image: url('../../images/logo.png');
+    background-color: var(--black-color);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 85px;
+}
+
+
+.nav-menu{
+    padding: 0;
+    list-style: none;
+    margin:10px 7px 7px 7px;
+}
+.nav-back-menu{
+    padding: 0;
+    list-style: none;
+    margin:7px 7px 7px 7px;
+}
+
+.nav-menu li {
+    margin: 5px;
+    padding: 0;
+    justify-content: center;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.nav-back-menu li {
+    margin: 5px;
+    padding: 0;
+    justify-content: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-list-item {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    color: var(--white-color);
+    border-style: none;
+}
+
+.nav-menu-list-item a{
+    text-decoration: none;  
+}
+
+.nav-menu-list-link{
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    display: block;
+    color: var(--white-color);
+    border-style: none;
+}
+
+
+.nav-menu-icon-container{
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 36px;
+    margin: 0 auto;
+    color: var(----main-nav-red-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu-icon-avatar{
+    overflow: hidden;
+    border-radius: 100%;
+    border: 2px solid var(--white-color);
+    transform: translate3d(0, 0, 0);
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    display: flex; /* Use flex to center vertically and horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    width: 36px;
+    height: 36px;
+    margin: auto;
+}
+
+.nav-menu-icon-div{
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: middle;
+    display: flex; /* Use flex to center vertically and horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; 
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+.fas{
+    color: var(--white-color);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.menu-icons{
+    color: var(--main-nav-red-color);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.back-icon{
+    color: var(--main-nav-red-color);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+.nav-menu-item-text{
+    background-color: black;
+    padding: 0 10px;
+    font-size: 14px;
+    font-size: 0.78rem;
+    border-radius: 3px;
+    color: var(--white-color);
+    white-space: nowrap;
+    text-align: center; /* Center text horizontally */
+    margin-top: 5px;
+}
+
+.back-nav{
+    padding: 0;
+    list-style: none;
+    margin:7px 7px 7px 0px;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+/* profile css */
+
+
+.profile-wrapper{
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* margin-left: 85px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--profile-header-hr-line);
+    margin: 0 24px;
+    min-height: 4.5rem;
+    box-sizing: border-box;
+}
+
+.profile-nav-toggle{
+    margin-right: 12px;
+    padding: 0;
+    width: 36px;
+    height: 30px;
+    border-color: transparent;
+    cursor: pointer;
+    color: var(--main-nav-red-color);
+    background-color: var(--white-color);;
+}
+
+.menu-button{
+    color: var(--main-nav-red-color);
+}
+
+.profile-user-name{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.user-name{
+    color: var(--black-color);
+    font-size: 1.125rem;
+}
+
+.profile-content{
+    position: relative;
+    box-sizing: border-box;
+    z-index: 10;
+    flex: 1 0 auto;
+}
+
+.profile-nav{
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 190px;
+    padding: 25px 12px 25px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+}
+
+
+.profile-nav-list{
+    padding: 0%;
+}
+.profile-nav-items{
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 15px 0 15px;
+    padding: 0;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--profile-nav-item-color);
+
+}
+.profile-user-name a{
+    text-decoration: none;
+    color: var(--profile-line-selected-nav-item);
+}
+
+.profile-user-name a:hover{
+    text-decoration: underline;
+    color: var(--profile-line-selected-nav-item);
+}
+.profile-nav-items a{
+    padding: 8px 0 8px 6px;
+    text-decoration: none;
+    color: var(--profile-nav-item-color);
+}
+
+.profile-nav-items a.profile {
+    border-left: 2px solid var(--profile-line-selected-nav-item);
+    border-radius: 0px;
+    font-weight: bold;
+    color: var(--profile-line-selected-nav-item);
+    padding-left: 4px;
+    padding: 8px 0 8px 6px;
+}
+
+.profile-nav-items a.profile:hover {
+    text-decoration: underline;
+    color: var(--profile-line-selected-nav-item);
+
+}
+
+.profile-nav-items a:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.profile-data{
+    display: flex;
+    padding: 12px;
+    box-sizing: border-box;
+    position: relative;
+    left: 150px;
+    top: 10px;
+    right: 0px;
+    width: 90%;
+}
+
+.profile-data-user-details{
+    flex: 2;
+    text-align: left;
+    justify-content: center;
+}
+
+.profile-data-edit-details{
+    flex: 1;
+    text-align: right;
+    height: 100%;
+
+}
+
+.btn-edit-profile{
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    padding: 8px 14px;
+}
+
+.profile-edit-icon{
+    color: var(--black-color);
+}
+
+.profile-avatar{
+    margin-right: 20px;
+}
+
+.profile-avatar a{
+    float: left;
+    position: relative;
+    width: 128px;
+    height: 128px;
+}
+
+.profile-icon{
+    width: 128px;
+    height: 128px;
+    font-size: 130px;
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+
+.profile-user-content{
+    position: relative;
+    left: 110px;
+    top: 30px;
+    text-align: left;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details a{
+    color: var(--main-nav-red-color);
+    text-decoration: underline;
+}
