@@ -1,0 +1,124 @@
+:root{
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --main-nav-red-color:#D41B2C;
+    --profile-nav-item-color:#b52828;
+    --profile-line-selected-nav-item:#2d3b45;
+    --profile-header-hr-line:#c7cdd1;
+    --assignment-content-tick-icon: #39c63c;
+}
+
+
+
+.content-header a.breadcrumb-noactive-link {
+    color: var(--profile-nav-item-color);
+}
+
+.assignmt-student-view-btn {
+    display:flex;
+    justify-content: right;
+}
+
+.content-header i {
+    color: var(--black-color);
+}
+
+.filter-assignments {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between  ;
+}
+
+.filter-assignments input{
+    width: 30%;
+}
+
+
+.filter-assignments i{
+    color: var(--black-color);
+}
+
+.assignment-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.assignment-card{
+    width: 90%;
+}
+
+.icon-colors{
+    color: var(--black-color);
+}
+
+.list-header-right-text{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-right: 20px;
+}
+
+.card-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* .card-list-item .d-flex {
+    margin-left: auto;
+  } */
+
+  .card-list-item .mb-2 {
+    margin-top: 10px; /* Add space below the header */
+  }
+
+.card-list-item-header{
+    font-weight: bold;
+}
+
+.card-list-item .d-flex small {
+    margin-right: 10px;
+}
+
+.list-item-row{
+    width:100%;
+}
+
+.list-item-drag-icon{
+    /* margin-right: 20px; */
+    /* height: 70px; */
+    align-items: center;
+}
+
+.list-item-drag-icon i{
+    margin-right: 15px;
+}
+
+.list-item-option-icon i{
+    margin-right: 20px;
+
+}
+
+.list-item-option-icon{
+    align-items: center;
+}
+
+.tick-icon{
+    color: var(--assignment-content-tick-icon);
+}
+
+
+.custom-button {
+    border: none;
+    background-color: var(--white-color);
+}
+
+
+.edit-assignment-header{
+    float: right;
+    justify-content: end;
+    align-items: center;
+    margin: 8px;
+    display: flex;
+}

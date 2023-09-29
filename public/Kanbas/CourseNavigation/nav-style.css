@@ -14,6 +14,8 @@ body * {
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    min-width: 700px;
 }
 
 .flex-row-container{
@@ -31,6 +33,7 @@ body{
     margin: 0; 
     padding:0;
     min-width:200vh;
+    min-height: 100vh;
 }
 
 .app-navigation{
@@ -40,6 +43,23 @@ body{
     width: 85px;
     z-index: 100;
     background-color: var(--black-color);
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media (min-height: 500px) {
+    .app-navigation {
+        max-height: none; 
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+}
+
+@media (max-width: 1200px) {
+    .app-navigation {
+      display: none;
+    }
 }
 
 .neu-logo-container{
@@ -197,5 +217,166 @@ body{
 .nav-menu-list-item.active-item .nav-menu-item-text {
     color:#b52828;
     background-color: #ffffff;
+}
+
+.content-container {
+    overflow-y: auto;
+    /* max-height: 100vh; */
+    overscroll-behavior-y: contain;
+    /* min-width: 780px; */
+}
+
+
+@media (min-height: 500px) {
+    .content-container {
+        max-height: none; 
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+}
+
+@media (min-width: 780px) {
+    .content-container {
+     display: block; 
+      overflow-x: hidden;
+      float: left;
+    }
+  } 
+
+/** Second Nav Bar **/
+
+.content-header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--profile-header-hr-line);
+    margin: 0 24px;
+    min-height: 4.5rem;
+    box-sizing: border-box;
+    min-width: 740px;
+}
+
+
+
+
+.content-nav-toggle{
+    margin-right: 12px;
+    padding: 0;
+    width: 36px;
+    height: 30px;
+    border-color: transparent;
+    cursor: pointer;
+    color: var(--main-nav-red-color);
+    background-color: var(--white-color);;
+}
+.menu-button{
+    color: var(--main-nav-red-color);
+}
+
+
+.second-nav{
+    position: relative;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 190px;
+    padding: 25px 12px 25px 20px;
+    box-sizing: border-box;
+    /* overflow-y: auto;
+    overscroll-behavior-y: contain; */
+}
+
+.second-nav-list{
+    padding: 0%;
+}
+.second-nav-items{
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 15px 0 15px;
+    padding: 0;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--profile-nav-item-color);
+}
+
+
+.second-nav-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    flex-grow: 1;
+    max-height: 100vh;
+}
+
+@media (min-height: 500px) {
+    .second-nav-container {
+        max-height: none; 
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+}
+
+@media (max-width: 1000px) {
+    .second-nav-container {
+      display: none;
+    }
+}
+
+
+
+.data-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: contain;
+    max-height: 75vh;
+     /* overflow-x: auto;  */
+}
+  
+
+.content-header a{
+    text-decoration: none;
+    color: var(--profile-line-selected-nav-item);
+}
+
+.content-header-data a:hover{
+    text-decoration: underline;
+    color: var(--profile-line-selected-nav-item);
+}
+.second-nav-items a{
+    padding: 8px 0 8px 6px;
+    text-decoration: none;
+    color: var(--profile-nav-item-color);
+}
+
+.second-nav-items a.active-second-nav-link {
+    border-left: 2px solid var(--profile-line-selected-nav-item);
+    border-radius: 0px;
+    font-weight: bold;
+    color: var(--profile-line-selected-nav-item);
+    padding-left: 4px;
+    padding: 8px 0 8px 6px;
+}
+
+.second-nav-items a.profile:hover {
+    text-decoration: underline;
+    color: var(--profile-line-selected-nav-item);
+}
+
+.second-nav-items a:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.small-nav-bar {
+    padding: 10px 20px 10px 20px;
+    background-color: #000000;
+}
+
+
+
+.breadcrumb-container {
+    display: flex;
+    flex-grow: 1;
 }
 
