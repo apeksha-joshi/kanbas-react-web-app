@@ -1,3 +1,4 @@
+
 :root{
     --black-color:#000000;
     --white-color:#ffffff;
@@ -11,29 +12,29 @@ body * {
     font-family: "Lato Extended","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;  
 }
 
+html{
+    height: 100%;
+}
+
 body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    min-width: 700px;
+    overflow-x: hidden;
+    height: 100%;
 }
 
-.flex-row-container{
-    display:flex;
-    flex-direction: row;
+.main-container{
+    margin: 0px;
+    height: 100%;
 }
 
-.flex-grow-1{
-    flex-grow: 1;
+.main-row-container{
+    height: 100%;
 }
 
-.app {
-    box-sizing: border-box;
-    min-height: 100vh; 
-    margin: 0; 
-    padding:0;
-    min-width:200vh;
-    min-height: 100vh;
+.app-nav-col{
+    width: 100px;
+    background-color: var(--black-color);
 }
 
 .app-navigation{
@@ -43,30 +44,27 @@ body{
     width: 85px;
     z-index: 100;
     background-color: var(--black-color);
-    overflow-y: auto;
-    max-height: 100vh;
+    /* overflow-y: auto; */
+    /* max-height: 100vh; */
     overflow-x: hidden;
+    /* height: 100vh; */
 }
 
-@media (min-height: 500px) {
-    .app-navigation {
+/* @media (min-height: 500px) {
+    .app-nav-col {
         max-height: none; 
         overflow-y: auto;
         overscroll-behavior-y: contain;
+        overflow-x: hidden;
     }
-}
+} */
 
-@media (max-width: 1200px) {
-    .app-navigation {
-      display: none;
-    }
-}
 
 .neu-logo-container{
     width: 100%;
     background-color: var(--black-color);
     box-sizing: border-box;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .neu-logo{
@@ -144,10 +142,6 @@ body{
     justify-content: center;
 }
 
-/* .nav-menu-list-item.active-item .nav-menu-icon-container{
-    color: #2d3b45;
-} */
-
 
 .nav-menu-icon-avatar{
     position: relative;
@@ -219,31 +213,8 @@ body{
     background-color: #ffffff;
 }
 
-.content-container {
-    overflow-y: auto;
-    max-height: 100vh;
-    overscroll-behavior-y: contain;
-    /* min-width: 780px; */
-}
 
-
-@media (min-height: 500px) {
-    .content-container {
-        max-height: none; 
-        overflow-y: auto;
-        overscroll-behavior-y: contain;
-    }
-}
-
-@media (min-width: 780px) {
-    .content-container {
-     display: block; 
-      overflow-x: hidden;
-      float: left;
-    }
-  } 
-
-/** Second Nav Bar **/
+/* Breadcrumb-header */
 
 .content-header{
     display: flex;
@@ -254,9 +225,6 @@ body{
     box-sizing: border-box;
     min-width: 740px;
 }
-
-
-
 
 .content-nav-toggle{
     margin-right: 12px;
@@ -272,6 +240,25 @@ body{
     color: var(--main-nav-red-color);
 }
 
+.content-header a{
+    text-decoration: none;
+    color: var(--profile-line-selected-nav-item);
+}
+
+.content-header-data a:hover{
+    text-decoration: underline;
+    color: var(--profile-line-selected-nav-item);
+}
+
+.content-header li.breadcrumb-noactive-link a{
+    color: var(--profile-nav-item-color);
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* Second nav bar */
 
 .second-nav{
     position: relative;
@@ -301,48 +288,6 @@ body{
 }
 
 
-.second-nav-container{
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior-y: contain;
-    flex-grow: 1;
-    max-height: 100vh;
-}
-
-@media (min-height: 500px) {
-    .second-nav-container {
-        max-height: none; 
-        overflow-y: auto;
-        overscroll-behavior-y: contain;
-    }
-}
-
-@media (max-width: 1000px) {
-    .second-nav-container {
-      display: none;
-    }
-}
-
-
-
-.data-container{
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior-y: contain;
-    max-height: 75vh;
-     /* overflow-x: auto;  */
-}
-  
-
-.content-header a{
-    text-decoration: none;
-    color: var(--profile-line-selected-nav-item);
-}
-
-.content-header-data a:hover{
-    text-decoration: underline;
-    color: var(--profile-line-selected-nav-item);
-}
 .second-nav-items a{
     padding: 8px 0 8px 6px;
     text-decoration: none;
@@ -367,16 +312,3 @@ body{
     text-decoration: underline;
     color: inherit;
 }
-
-.small-nav-bar {
-    padding: 10px 20px 10px 20px;
-    background-color: #000000;
-}
-
-
-
-.breadcrumb-container {
-    display: flex;
-    flex-grow: 1;
-}
-

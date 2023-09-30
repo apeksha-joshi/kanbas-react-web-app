@@ -1,0 +1,88 @@
+:root{
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --main-nav-red-color:#D41B2C;
+    --profile-nav-item-color:#b52828;
+    --profile-line-selected-nav-item:#2d3b45;
+    --profile-header-hr-line:#c7cdd1;
+    --dashboard-heading-color: #6c757d;
+    --card-title-color: #5199d6;
+    --card-color-1:#927005;
+    --card-color-2:#3c4f36;
+}
+
+@media (min-width: 1200px) {
+    .app-nav-col {
+      display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .app-nav-col {
+      display: none;
+    }
+}
+
+.dashboard-heading{
+    margin: 10px;
+    color: var(--dashboard-heading-color);
+}
+
+.single-card a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.card-title{
+    color:var(--card-title-color);
+}
+
+.card-img{
+    height:200px;
+}  
+
+.card-1-color{
+    background-color: var(--card-color-1);
+}
+
+.card-2-color{
+    background-color: var(--card-color-2);
+}
+
+.card-style{
+    width: 270px;
+}
+
+@media (max-width: 500px) {
+    .card-style{
+        width: 100%;
+    }
+}
+
+.card-option-btn{
+    background-color: black;
+    color: var(--white-color);
+}
+
+.card-body p{
+    color: var(--dashboard-heading-color);
+    margin:0px;
+}
+
+.card-body small{
+    color: var(--dashboard-heading-color);
+}
+
+.card-body i{
+    color:var(--dashboard-heading-color);
+}
+
+.dashboard-container{
+    overflow-y: auto;
+    max-height: 95vh;
+}
+
+.col a{
+    text-decoration: none;
+    color: var(--black-color);
+}
