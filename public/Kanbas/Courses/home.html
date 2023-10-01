@@ -1,127 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <title>Kanbas</title>
-</head>
-<body>
-<div>
-<table border-collapse: collapse; border:none;>
-    <tr>
-        <td style="vertical-align:top;padding: 10px;">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/profile.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/home-nav.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-            
-        <td style="vertical-align:top;padding: 10px;">
-            <ul>
-                <li><a href="/Kanbas/Courses/home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Assignments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Grades/grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/CourseSettings/course-details.html">Settings</a></li>
-            </ul>
-        </td>
-            
-        <td style="vertical-align:top;padding: 10px;">
-            <button type="button">Collapse All</button>
-            <button type="button">View Progress</button>
-            <select id="select-item">
-                <option value="Publish-All">Publish All</option>
-            </select>
-            <button type="button">Module</button>
+    <head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="../CourseNavigation/new-style.css" rel="stylesheet"/>
+        <link href="home-style.css" rel="stylesheet"/>
+    <title>Home</title>
+    </head>
+    <body>
+        <div class="container-fluid main-container">
+        <div class="row main-row-container">
 
-            <ul>
-                <li> Week 0 - INTRO</li>
-                <ul class="round-list">
-                    <li>LEARNING OBJECTIVES</li>
-                    <ul class="square-list">
-                        <li>Introduction to the course</li>
-                        <li>Learn what is Web Development</li>
-                        <li>Creating a development environment</li>
-                        <li>Creating a Web Application</li>
-                        <li>Getting started with the 1st assignment</li>
+            <div class="col-1 d-none d-lg-block app-nav-col">
+                <div id="app-navigation" class="app-navigation">
+                    <!-- neu logo -->
+                    <div id="neu-logo-container" class="neu-logo-container">
+                        <a href="#" class="neu-logo"></a>
+                    </div>
+                    <!-- nav menu -->
+                    <ul id="nav-menu" class="nav-menu">
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="/Kanbas/Account/Profile/profile.html">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Account </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-tachometer-alt fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Dashboard </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item active-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-book fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Courses </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-calendar-alt fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Calendar </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-envelope-open-text fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Inbox </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="far fa-clock fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> History </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-tv fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Studio </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-sign-out-alt fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Commons </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="far fa-question-circle fa-lg menu-icons"></i>
+                                    </div>
+                                </div>
+                                <div class="nav-menu-item-text"> Help </div>
+                            </a>
+                        </li>
                     </ul>
-                </ul>
-                <ul class="round-list">
-                    <li>READING</li>
-                    <ul class="square-list">
-                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                    </ul>
-                </ul>
-                <ul class="round-list">
-                    <li>SLIDES</li>
-                    <ul class="square-list">
-                        <li><a href="#">Introduction to Web Development Links to an external site.</a></li>
-                        <li><a href="#">Creating an HTTP server with Node.js Links to an external site.</a></li>
-                        <li><a href="#">Creating a React Application Links to an external site.</a></li>
-                    </ul>
-                </ul>
-                <li> Week 1 - HTML</li>
-                <ul class="round-list">
-                    <li>LEARNING OBJECTIVES</li>
-                    <ul class="square-list">
-                        <li>Learn how to create user interface with HTML</li>
-                        <li>Keep working on assignment 1</li>
-                        <li>Deploy the assignment to Netlify</li>
-                    </ul>
-                </ul>
-                <ul class="round-list">
-                    <li>READING</li>
-                    <ul class="square-list">
-                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces with HTML</li>
-                    </ul>
-                </ul>
-            </ul>
-        </td>
+                </div> 
+            </div>
+            <div class="col page-content">
+                <div class="row content-header-border align-items-center">
+                    <div class="col">
+                        <div id="profile-header" class="content-header">
+                            <a href="profile-nav.html" id="profile-menu-toggle" class="content-nav-toggle"><i class="fas fa-bars fa-lg menu-button"></i></a>
+                            <div class="breadcrumb-position">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item breadcrumb-noactive-link"><a href="../Courses/home.html">CS5610.17387.202410</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Modules</li>
+                                </ol>
+                            </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
 
-        <td style="vertical-align:top;padding: 10px;">
-            <h2>Course Status</h2>
-            <button type="button">Unpublish</button>
-            <button type="button">Published</button>
-            <ul>
-                <li><a href="#">Import Existing Content</a></li>
-                <li><a href="#">Import From Commons</a></li>
-                <li><a href="#">Choose Home Page</a></li>
-                <li><a href="#">View Course Stream</a></li>
-                <li><a href="#">New Announcement</a></li>
-                <li><a href="#">New Analytics</a></li>
-                <li><a href="#">View Course Notifications</a></li>
-            </ul>
-            <h2>Comming Up</h2>
-            <a href="#">View Calendar</a>
-            <ul>
-                <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-                <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-            </ul>
-        </td>
-    </tr>
-</table>
-</div>
-</body>
+                    <!-- Second Nav -->
+
+                    <div class="col-2 d-none d-lg-block second-nav-container">
+                        <div id="profile-nav" class="second-nav">
+                            <ul class="second-nav-list">
+                                <li class="second-nav-items-fixed">202410_Fall_2023</li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text active-second-nav-link">Home</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Piazza</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Zoom Meetings</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Modules</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Quizzes</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Assignments</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Grades</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">People</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Microsoft Team Meetings</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">FACT Reporting and Photo Roster</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Discussions</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Announcements</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Pages</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Files</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Page Content -->
+
+                    
+                    <div class="col-12 col-lg-10 col-xl-7">
+                        <div class="row pe-3 my-2">
+                            <div class="btn-grp-row">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-color">Collapse All</button>
+                                    <button type="button" class="btn btn-color mx-2">Veiw Progress</button>
+                                    <div class="dropdown">
+                                        <button class="btn btn-color dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            <i class="fa-regular fa-circle-check tick-icon"></i>Publish All
+                                        </button>
+                                    </div>
+                                    <button type="button" class="btn btn-danger mx-2"><i class="fas fa-plus plus-color"></i>&nbsp;Module</button>
+                                    <button type="button" class="btn btn-color"><i class="fas fa-ellipsis-v icon-colors"></i></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row pe-3">
+                            <hr>
+                        </div>
+                        
+                        <div class="row">
+                            <!-- Assignment content -->
+                        <div class="course-content">
+                            <div class="card my-3">
+                                <div class="card-header px-0">
+                                    <div class="btn-group mx-2 align-items-center" role="group">
+                                        <button id="assignment-option" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fas fa-grip-vertical fa-lg icon-colors"></i>&nbsp;
+                                        </button>
+                                        <strong><span class="list-item-color">Week 0 - INTRO</span></strong>
+                                    </div>
+                                    <div class="float-end list-header-right-text">
+                                    <div class="d-flex align-items-center">
+                                    
+                                        <div class="dropdown">
+                                            <button class="btn btn-color dropdown-toggle icon-colors" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-check-circle fa-lg tick-icon"></i>
+                                            </button>
+                                        </div>
+                                        <i class="fas fa-plus icon-colors mx-3"></i>&nbsp;
+                                        <i class="fas fa-ellipsis-v icon-colors me-2"></i>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+
+
+                                <ul class="list-group list-group-flush">
+                                    <!-- Objectives -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 card-list-item-header ps-3 fw-bold"><a href="">LEARNING OBJECTIVES</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Introduction to the course</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Learn What is Web Development</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Creating a development environment</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Creating a Web Application</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Getting started with the 1st Assignment</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Reading -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-3 card-list-item-header fw-bold"><a href="">READING</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Full Stack Developer - Chapter 1</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Full Stack Developer - Chapter 2</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Slides -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 card-list-item-header ps-3 fw-bold"><a href="">SLIDES</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <i class="fas fa-link icon-colors ps-3"></i>
+                                                <h6 class="list-item-link ps-3"><a href="https://www.youtube.com/watch?v=YzZz16Gtfdc">Introduction to Web Development</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <i class="fas fa-link icon-colors ps-3"></i>
+                                                <h6 class="list-item-link ps-3"><a href="https://www.youtube.com/watch?v=YzZz16Gtfdc">Introduction to Web Development</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="card my-3">
+                                <div class="card-header px-0">
+                                    <div class="btn-group mx-2 align-items-center" role="group">
+                                        <button id="assignment-option" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fas fa-grip-vertical fa-lg icon-colors"></i>&nbsp;
+                                        </button>
+                                        <strong><span class="list-item-color">Week 1 - HTML</span></strong>
+                                    </div>
+                                    <div class="float-end list-header-right-text">
+                                    <div class="d-flex align-items-center">
+                                    
+                                        <div class="dropdown">
+                                            <button class="btn btn-color dropdown-toggle icon-colors" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-check-circle fa-lg tick-icon"></i>
+                                            </button>
+                                        </div>
+                                        <i class="fas fa-plus icon-colors mx-3"></i>&nbsp;
+                                        <i class="fas fa-ellipsis-v icon-colors me-2"></i>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+
+
+                                <ul class="list-group list-group-flush">
+                                    <!-- Objectives -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 card-list-item-header ps-3 fw-bold"><a href="">LEARNING OBJECTIVES</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Learn how to create user interfaces with HTML</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Keep working on assignment 1</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Deploy the assignment to Netlify</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Reading -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-3 card-list-item-header fw-bold"><a href="">READING</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Full Stack Developer - Chapter 1</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 ps-5 fw-bold"><a href="">Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Slides -->
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <h6 class="mb-1 card-list-item-header ps-3 fw-bold"><a href="">SLIDES</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <i class="fas fa-link icon-colors ps-3"></i>
+                                                <h6 class="list-item-link ps-3"><a href="https://www.youtube.com/watch?v=YzZz16Gtfdc">Getting Started with Assignment 1</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
+                                        <div class="row list-item-row">
+                                            <div class="col-9 d-flex p-0">
+                                                <i class="fas fa-grip-vertical fa-lg icon-colors ps-2"></i>
+                                                <i class="fas fa-link icon-colors ps-3"></i>
+                                                <h6 class="list-item-link ps-3"><a href="https://www.youtube.com/watch?v=YzZz16Gtfdc">Deploying React.js to Netlify</a></h6>
+                                            </div>
+
+                                            <div class="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
+                                                <i class="fas fa-check-circle tick-icon me-4"></i>
+                                                <i class="fas fa-ellipsis-v icon-colors"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    
+                                </ul>
+                            </div>
+                            
+
+
+                              
+                        </div>
+                        </div>
+
+                        
+
+                    </div>
+                    
+
+                    <div class="col-3 mt-2 ps-4 d-none d-xl-block">
+                        <div class="row">
+                            <h5>Course Status</h5>
+                            
+                        </div>
+                        <div class="row ps-3">
+                            <div class="col">
+                                <button type="button" class="btn btn-color"><i class="fas fa-ban icon-colors me-1"></i>Unpublished</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-success" disabled><i class="fas fa-check-circle fa-lg tick-icon me-2"></i>Published</button>
+                            </div>
+                        </div>
+
+                        <div class="row px-3 mt-2">
+                            <button type="button" class="btn btn-color my-2"><i class="fas fa-sign-out-alt icon-colors me-1"></i>Import Existing Content</button>
+                            <button type="button" class="btn btn-color"><i class="fas fa-sign-out-alt icon-colors me-1"></i>Import from Commons</button>
+                            <button type="button" class="btn btn-color my-2"><i class="fas fa-crosshairs icon-colors me-1"></i>Choose Home Page</button>
+                            <button type="button" class="btn btn-color"><i class="far fa-chart-bar icon-colors me-2"></i>View Course Screen</button>
+                            <button type="button" class="btn btn-color my-2"><i class="fas fa-bullhorn fa-sm icon-colors me-1"></i>New Announcement</button>
+                            <button type="button" class="btn btn-color"><i class="far fa-chart-bar icon-colors me-2"></i>New Analytics</button>
+                            <button type="button" class="btn btn-color my-2"><i class="far fa-bell fa-sm icon-colors me-1"></i>View Course Notifications</button>
+                            
+                        </div>
+
+
+                        <div class="row ps-3">
+                            <div class="col set-position">
+                                <h5 class="fw-bold">To Do</h5>
+                            </div>
+                            <hr class="pe-3">
+                            <ol class="list-group">
+                                <li class="list-group-item d-flex todo justify-content-between align-items-start">
+                                  <span class="badge bg-danger rounded-circle">1</span>
+                                  <div class="ms-2 me-auto">
+                                    <div class="fw-light"><a href="">Grade A1 - ENV + HTML</a></div>
+                                    <small>100 points | Sep 18 11:59pm</small>
+                                  </div>
+                                  
+                                </li>
+                              </ol>
+                        </div>
+
+                        <div class="row ps-3 mt-1">
+                            <div class="col set-position">
+                                <h5 class="fw-bold">Coming Up</h5>
+                            </div>
+                            <div class="col set-position float-end">
+                                <p><a href=""><i class="far fa-calendar fa-sm icon-colors me-1"></i>View Calendar</a></p>
+                            </div>
+                            <hr class="pe-3">
+                        </div>
+
+                        <div class="row px-3">
+                            <div class="d-flex float-end upcoming-item">
+                                <i class="far fa-calendar fa-sm icon-colors me-1"></i>
+                                <div class="ps-3">
+                                <a href="" class="ps-3">Lecture</a><br>
+                                <small class="ps-3">CS5610.17387.202410</small><br>
+                                <small class="ps-3">Sep 18 11:59pm</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row px-3 my-3">
+                            <div class="d-flex float-end upcoming-item">
+                                <i class="far fa-calendar fa-sm icon-colors me-1"></i>
+                                <div class="ps-3">
+                                <a href="" class="ps-3">Lecture</a><br>
+                                <small class="ps-3">CS5610.17387.202410</small><br>
+                                <small class="ps-3">Sep 18 11:59pm</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row px-3">
+                            <div class="d-flex float-end upcoming-item">
+                                <i class="far fa-calendar fa-sm icon-colors me-1"></i>
+                                <div class="ps-3">
+                                <a href="" class="ps-3">Lecture</a><br>
+                                <small class="ps-3">CS5610.17387.202410</small><br>
+                                <small class="ps-3">Sep 18 11:59pm</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+
+        </div>
+    </div>
+    </body>
 </html>

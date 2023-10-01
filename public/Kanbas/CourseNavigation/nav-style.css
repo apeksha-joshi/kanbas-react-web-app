@@ -301,6 +301,15 @@ body{
 }
 
 
+.second-nav-items-fixed{
+    list-style-type: none;
+    font-size: 0.6875rem;
+    font-style: italic;
+    color: var(--btn-background-light-grey);
+    margin-bottom: 2px;
+    list-style-type: none;
+}
+
 .second-nav-container{
     overflow-y: auto;
     overflow-x: hidden;

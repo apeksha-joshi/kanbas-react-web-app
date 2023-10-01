@@ -113,29 +113,34 @@
                     </ul>
                 </div> 
             </div>
-            <div class="col me-3">
-                <div class="row">
-                    <div class="col">
+            <div class="col page-content">
+                <div class="row content-header-border align-items-center">
+                    <div class="col-6 col-md-10">
                         <div id="profile-header" class="content-header">
                             <a href="profile-nav.html" id="profile-menu-toggle" class="content-nav-toggle"><i class="fas fa-bars fa-lg menu-button"></i></a>
-                            <div>
-                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                <li class="breadcrumb-item breadcrumb-noactive-link"><a href="../Courses/home.html">CS5610.17387.202410</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
-                                </ol>
-                            </nav>
+                            <div class="breadcrumb-position">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                    <li class="breadcrumb-item breadcrumb-noactive-link"><a href="../Courses/home.html">CS5610.17387.202410</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                                    </ol>
+                                </nav>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-6 col-md-2">
+                        <button type="button" class="btn btn-color assignmt-student-view-btn"><i class="fas fa-glasses"></i>&nbsp;Student View</button>
                     </div>
                 </div>
                 <div class="row">
 
                     <!-- Second Nav -->
 
-                    <div class="col-2 d-none d-lg-block">
+                    <div class="col-2 d-none d-lg-block second-nav-container">
                         <div id="profile-nav" class="second-nav">
                             <ul class="second-nav-list">
+                                <li class="second-nav-items-fixed">202410_Fall_2023</li>
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Home</a></li>
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Piazza</a></li>
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Zoom Meetings</a></li>
@@ -150,6 +155,7 @@
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Announcements</a></li>
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Pages</a></li>
                                 <li class="second-nav-items"><a href="#" class="second-nav-item-text">Files</a></li>
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Settings</a></li>
                             </ul>
                         </div>
                     </div>
@@ -163,7 +169,7 @@
                                 <input type="text" class="form-control" id="search_assignments" placeholder="Search for Assignments">
                                 <div class="btn-group" role="group">
                                     <button type="button" class="btn btn-color"><i class="fas fa-plus"></i>&nbsp;Group</button>
-                                    <button type="button" class="btn btn-danger mx-2"><i class="fas fa-plus"></i>&nbsp;Assignment</button>
+                                    <button type="button" class="btn btn-danger mx-2"><i class="fas fa-plus plus-color"></i>&nbsp;Assignment</button>
                                     <button type="button" class="btn btn-color"><i class="fas fa-ellipsis-v"></i></button>
                                 </div>
                                 
@@ -180,7 +186,7 @@
                                         <button id="assignment-option" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fas fa-grip-vertical fa-lg icon-colors"></i>&nbsp;
                                         </button>
-                                        <span>Assignments</span>
+                                        <strong><span>Assignments</span></strong>
                                     </div>
                                     <div class="float-end list-header-right-text">
                                     <div class="d-flex align-items-center">
@@ -194,7 +200,7 @@
                                 </div>
 
 
-                                <ul class="list-group list-group-flush">
+                                <ul class="list-group list-group-flush border-color">
                                 
                                     <a href="#" class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
                                         <div class="row list-item-row">
@@ -203,7 +209,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A1 Setup</h5>
+                                                <h6 class="mb-1 card-list-item-header">A1 Setup</h6>
                                                 <small>
                                                     Week 0 - SETUP - Week Starting on Monday Module | 
                                                     <br />
@@ -226,7 +232,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A2 CSS</h5>
+                                                <h6 class="mb-1 card-list-item-header">A2 CSS</h6>
                                                 <small>
                                                     Week 2 - CSS - Week Starting on Monday Module | 
                                                     <br />
@@ -249,7 +255,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A3 JS</h5>
+                                                <h6 class="mb-1 card-list-item-header">A3 JS</h6>
                                                 <small>
                                                     Week 4 - JS - Week Starting on Monday Module | 
                                                     <br />
@@ -272,7 +278,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A4 React</h5>
+                                                <h6 class="mb-1 card-list-item-header">A4 React</h6>
                                                 <small>
                                                     Week 6 - React - Week Starting on Monday Module | 
                                                     <br />
@@ -295,7 +301,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A5 Node</h5>
+                                                <h6 class="mb-1 card-list-item-header">A5 Node</h6>
                                                 <small>
                                                     Week 8 - SETUP - Week Starting on Monday Module | 
                                                     <br />
@@ -318,7 +324,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">A6 Mongo</h5>
+                                                <h6 class="mb-1 card-list-item-header">A6 Mongo</h6>
                                                 <small>
                                                     Week 10 - SETUP - Week Starting on Monday Module | 
                                                     <br />
@@ -343,7 +349,7 @@
                                         <button id="assignment-option" type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fas fa-grip-vertical fa-lg icon-colors"></i>&nbsp;
                                         </button>
-                                        <span>Quizzes</span>
+                                        <strong><span>Quizzes</span></strong>
                                     </div>
                                     <div class="float-end list-header-right-text">
                                     <div class="d-flex align-items-center">
@@ -357,7 +363,7 @@
                                 </div>
 
 
-                                <ul class="list-group list-group-flush">
+                                <ul class="list-group list-group-flush border-color">
                                 
                                     <a href="#" class="list-group-item list-group-item-action list-group-item-light card-list-item" aria-current="true">
                                         <div class="row list-item-row">
@@ -366,7 +372,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">Q1-HTML</h5>
+                                                <h6 class="mb-1 card-list-item-header">Q1-HTML</h6>
                                                 <small>
                                                     MultipleModules | 
                                                     <br />
@@ -389,7 +395,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">Q2-CSS</h5>
+                                                <h6 class="mb-1 card-list-item-header">Q2-CSS</h6>
                                                 <small>
                                                     MultipleModules | 
                                                     <br />
@@ -412,7 +418,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">Q3-JS</h5>
+                                                <h6 class="mb-1 card-list-item-header">Q3-JS</h6>
                                                 <small>
                                                     MultipleModules | 
                                                     <br />
@@ -435,7 +441,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">Q4-NODE</h5>
+                                                <h6 class="mb-1 card-list-item-header">Q4-NODE</h6>
                                                 <small>
                                                     MultipleModules | 
                                                     <br />
@@ -458,7 +464,7 @@
                                                     <i class="far fa-edit fa-lg icon-colors"></i>
                                             </div>
                                             <div class="col col-md-10">
-                                                <h5 class="mb-1 card-list-item-header">Q5 - MONGO</h5>
+                                                <h6 class="mb-1 card-list-item-header">Q5 - MONGO</h6>
                                                 <small>
                                                     MultipleModules | 
                                                     <br />

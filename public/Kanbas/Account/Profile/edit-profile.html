@@ -1,219 +1,137 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <title>Edit Profile</title>
-</head>
-<body>
-<div>
-<table border-collapse: collapse; border:none;>
-    <tr>
-        <td style="vertical-align:top;padding: 10px;">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/profile.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/home-nav.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td style="vertical-align:top;padding: 10px;">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/profile.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-        <td style="vertical-align:top;padding: 10px;">
-            <form action="/Kanbas/Account/Profile/profile.html">
-            <h2>Apeksha Joshi</h2>
-            <label for="name">Name:*</label>
-            <input id="name" name="name" value="Apeksha Joshi" title="Enter your name" required/>
-            <label for="pronoun">Pronouns:</label>
-            <select name="pronoun" id="pronoun" title="select your pronoun">
-                <option value="none">None</option>
-                <option value="She/Her">She/Her</option>
-                <option value="He/Him">He/Him</option>
-                <option value="They/Them">They/Them</option>
-                <option value="not-say">Prefer not to say</option>
-            </select>
-            <br /><br />
-            <label for="title">Title:</label>
-            <input id="title" name="title" title="Enter title"/>
-            <h4>Contact</h4>
-            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-            <h4>Biography</h4>
-            <p>Student, Software Engineer, Machine Learning enthusiast</p>
-            <textarea id="biography" cols="50" name="biography">Student, Software Engineer, Machine Learning enthusiast</textarea>
-            <h4>Links</h4>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/apekshasj">Linkedin<img src="external_link.png" alt="External Link Icon" width="16" height="16">
-                    <span> Links to an external site</span></a></li>
-            </ul>
-            <br />
-            <br />
-            <h5 style="display: inline;margin-left: 60px;">Title</h5>
-            <h5 style="display: inline; margin-left: 180px;">URL</h5>
-            <br />
-            <input value="Linkedin" name="linkedin-link"/> <span>&rarr;</span><input value="https://www.linkedin.com/in/apekshasj"/> <a href="#">Remove</a><br />
-            <button type="button">Add another link</button><br />
-                <button type="button">Cancel</button>
-                <button>Save Profile</button><br />
-                <button type="button">Edit Profile</button>
-                <button>Cancel Editing</button>
-            </form>
-        </td>
-    </tr>
-</table>
-</div>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
-    <link href="../../CourseNavigation/nav-style.css" rel="stylesheet"/>
-    <link href="profile-style.css" rel="stylesheet"/>
-    
-   <title>Profile</title>
-</head>
-<body>
-    <div class="small-nav-bar d-block d-lg-none">
-        <a href="/Kanbas/CourseNavigation/navigation.html"><i class="fas fa-chevron-down fa-lg menu-button"></i></a>
-    </div>
-    <div class="flex-row-container app">
-            <div id="app-navigation" class="d-none d-xl-block app-navigation">
-                <!-- neu logo -->
-                <div id="neu-logo-container" class="neu-logo-container">
-                    <a href="#" class="neu-logo"></a>
-                </div>
-                <!-- nav menu -->
-                <ul id="nav-menu" class="nav-menu">
-                    <li class="nav-menu-list-item active-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="/Kanbas/Account/Profile/profile.html">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-avatar">
-                                    <i class="fas fa-user"></i>
+    <head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+        <link href="../../CourseNavigation/new-style.css" rel="stylesheet"/>
+        <link href="profile-style.css" rel="stylesheet"/>
+    <title>Edit Profile</title>
+    </head>
+    <body>
+        <div class="container-fluid main-container">
+        <div class="row main-row-container">
+
+            <div class="col-1 d-none d-xl-block  app-nav-col">
+                <div id="app-navigation" class="app-navigation">
+                    <!-- neu logo -->
+                    <div id="neu-logo-container" class="neu-logo-container">
+                        <a href="#" class="neu-logo"></a>
+                    </div>
+                    <!-- nav menu -->
+                    <ul id="nav-menu" class="nav-menu">
+                        <li class="nav-menu-list-item active-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="/Kanbas/Account/Profile/profile.html">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Account </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="fas fa-tachometer-alt fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Account </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-tachometer-alt fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Dashboard </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="fas fa-book fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Dashboard </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-book fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Courses </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="fas fa-calendar-alt fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Courses </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-calendar-alt fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Calendar </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="fas fa-envelope-open-text fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Calendar </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-envelope-open-text fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Inbox </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="far fa-clock fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Inbox </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="far fa-clock fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> History </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="far fa-clock fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> History </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-tv fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Studio </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="far fa-clock fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Studio </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="fas fa-sign-out-alt fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Commons </div>
-                        </a>
-                    </li>
-                    <li class="nav-menu-list-item">
-                        <a id="profile-link" class="nav-menu-list-link" href="#">
-                            <div class="nav-menu-icon-container">
-                                <div aria-hidden="true" class="nav-menu-icon-div">
-                                    <i class="far fa-question-circle fa-lg menu-icons"></i>
+                                <div class="nav-menu-item-text"> Commons </div>
+                            </a>
+                        </li>
+                        <li class="nav-menu-list-item">
+                            <a id="profile-link" class="nav-menu-list-link" href="#">
+                                <div class="nav-menu-icon-container">
+                                    <div aria-hidden="true" class="nav-menu-icon-div">
+                                        <i class="far fa-question-circle fa-lg menu-icons"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="nav-menu-item-text"> Help </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>        
-            <div class="container-fluid content-container test-scroll">     
-                <div class="row">
+                                <div class="nav-menu-item-text"> Help </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="col page-content">
+                <div class="row content-header-border align-items-center">
                     <div class="col">
-                    <div id="profile-header" class="content-header">
-                        <a href="profile-nav.html" id="profile-menu-toggle" class="content-nav-toggle"><i class="fas fa-bars fa-lg menu-button"></i></a>
-                        <div id="profile-user-name" class="content-header-data">
-                            <a href="#" class="user-name">Apeksha Suhas Joshi's Profile</a>
+                        <div id="profile-header" class="content-header">
+                            <a href="profile-nav.html" id="profile-menu-toggle" class="content-nav-toggle"><i class="fas fa-bars fa-lg menu-button"></i></a>
+                            <div id="profile-user-name" class="content-header-data">
+                                <a href="#" class="user-name">Apeksha Suhas Joshi's Profile</a>
+                            </div>
                         </div>
                     </div>
-                    </div>
-            </div>
-        
-                
-                
+                </div>
                 <div class="row">
-                    <div class="col-1 d-none d-xl-block">
-                    <div id="profile-nav" class="d-none d-xl-block second-nav">
-                        <ul class="second-nav-list">
-                            <li class="second-nav-items"><a href="#" class="second-nav-item-text">Notifications</a></li>
+
+                    <!-- Second Nav -->
+
+                    <div class="col-2 d-none d-lg-block second-nav-container">
+                        <div id="profile-nav" class="second-nav">
+                            <ul class="second-nav-list">
+                                <li class="second-nav-items"><a href="#" class="second-nav-item-text">Notifications</a></li>
                             <li class="second-nav-items"><a href="/Kanbas/Account/Profile/profile.html" class="second-nav-item-text active-second-nav-link">Profile</a></li>
                             <li class="second-nav-items"><a href="#" class="second-nav-item-text">Files</a></li>
                             <li class="second-nav-items"><a href="#" class="second-nav-item-text">Settings</a></li>
@@ -222,116 +140,117 @@
                             <li class="second-nav-items"><a href="#" class="second-nav-item-text">The Hub</a></li>
                             <li class="second-nav-items"><a href="#" class="second-nav-item-text">Qwickly Course Tools</a></li>
                             <li class="second-nav-items"><a href="#" class="second-nav-item-text">Global Announcements</a></li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                    </div>
-                    <div class="col-11 col-xl-11 flex-grow-1">
-                        <div class="row flex-grow-1">
-                            <div class="col-12 col-lg-2">
-                                <div id="profile-avatar" class="profile-avatar">
-                                    <a href="#"><i class="fas fa-user-circle fa-lg profile-icon" style="color: #9e9ea3;"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7">
-                                <div id="edit-user-profile" class="edit-user-profile">
-                                    <div class="mb-3">
-                                        <label for="profile-name" class="form-label">Name:*</label>
-                                        <input type="text" class="form-control" id="profile-name" value="Apeksha Suhas Joshi" name="profile-name">
-                                    </div>
-                                    
-                                    <div class="mb-3">
-                                        <label for="profile-pronoun" class="form-label">Pronouns:</label>
-                                        <select name="profile-pronoun" id="profile-pronoun" title="select your pronoun" class="form-select">
-                                            <option value="none" selected>None</option>
-                                            <option value="She/Her">She/Her</option>
-                                            <option value="He/Him">He/Him</option>
-                                            <option value="They/Them">They/Them</option>
-                                            <option value="not-say">Prefer not to say</option>
-                                        </select>
-                                    </div>
 
-                                    <div class="mb-3">
-                                        <label for="profile-title" class="form-label">Title:</label>
-                                        <input type="text" class="form-control" id="profile-title" name="profile-title">
-                                    </div>
+                    <!-- Page Content -->
 
-                                    <h4>Contact</h4>
-                                    <p class="contact-details">No registered serviced, you can add some on the <a href="#">settings</a> page</p>
-
-                                    <div class="mb-3">
-                                        <h4>Biography</h4>
-                                        <!-- <label for="profile-biography" class="form-label">Biography:</label> -->
-                                        <textarea class="form-control" id="profile-biography" name="profile-biography" rows="5"></textarea>
-                                    </div>
-
-                                    <h4>Links</h4>
-                                    <!-- <div class="table-responsive"> -->
-                                        <!-- <table class="table table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col" class="text-center">Title</th>
-                                                    <th scope="col" class="text-center">   </th>
-                                                    <th scope="col" class="text-center">URL</th>
-                                                </tr>
-                                            </thead>
-                                        </table> -->
-                                        <div class="container profile-links-data">
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <h6 class="profile-link-header">Title</h6>
-                                                </div>
-                                                <div class="col-1">
-                                                    
-                                                </div>
-                                                <div class="col-5">
-                                                    <h6 class="profile-link-header">URL</h6>
-                                                </div>
-                                                <div class="col-1">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <input type="text" class="form-control" id="profile-link-title" name="profile-link-title" />
-                                                </div>
-                                                <div class="col-1">
-                                                    <i class="fas fa-arrow-right profile-right-arrow text-center"></i>
-                                                </div>
-                                                <div class="col-5">
-                                                    <input type="text" class="form-control" id="profile-link-url" name="profile-link-url" />
-                                                </div>
-                                                <div class="col-1">
-                                                    <a href="#">
-                                                        <i class="fas fa-times cross-ele"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </div> -->
-                                    <br />
-                                    <button class="btn btn-light">Add Another Link</button>
-                                    <hr />
-                                    <form action="/Kanbas/Account/Profile/profile.html">
-                                        <button class="btn btn-light edit-profile-btns float-end">Cancel</button>
-                                        <button class="btn btn-danger edit-profile-btns float-end">Save Profile</button>
-                                    </form>
-                                    <br /><br>
-                                    <br /><br>  
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-2 d-none d-lg-block cancel-edit-section">
-                                <div id="profile-cancel-edit" class="profile-cancel-edit">
-                                    <form action="/Kanbas/Account/Profile/profile.html">
-                                        <button class="btn btn-light btn-edit-profile float-end"><i class="fas fa-pencil-alt profile-edit-icon"></i>  Cancel Editing</button>
-                                    </form>
-                                </div>
+                    <!-- Edit Profile Details -->
+                    <div class="col-9 col-md-7 mt-3">
+                        <div class="row">
+                            <div id="profile-avatar" class="profile-avatar mt-4 ps-3 ms-4">
+                                <a href="#"><i class="fas fa-user-circle fa-lg profile-icon" style="color: #9e9ea3;"></i></a>
                             </div>
                         </div>
+                        <div class="row">
+                            <div id="edit-user-profile" class="edit-user-profile">
+                                <div class="mb-3">
+                                    <label for="profile-name" class="form-label">Name:*</label>
+                                    <input type="text" class="form-control" id="profile-name" value="Apeksha Suhas Joshi" name="profile-name">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="profile-pronoun" class="form-label">Pronouns:</label>
+                                    <select name="profile-pronoun" id="profile-pronoun" title="select your pronoun" class="form-select">
+                                        <option value="none" selected>None</option>
+                                        <option value="She/Her">She/Her</option>
+                                        <option value="He/Him">He/Him</option>
+                                        <option value="They/Them">They/Them</option>
+                                        <option value="not-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="profile-title" class="form-label">Title:</label>
+                                    <input type="text" class="form-control" id="profile-title" name="profile-title">
+                                </div>
+
+                                <h4>Contact</h4>
+                                <p class="contact-details">No registered serviced, you can add some on the <a href="#">settings</a> page</p>
+
+                                <div class="mb-3">
+                                    <h4>Biography</h4>
+                                    <!-- <label for="profile-biography" class="form-label">Biography:</label> -->
+                                    <textarea class="form-control" id="profile-biography" name="profile-biography" rows="5">Student, Software Engineer, Machine Learning enthusiast</textarea>
+                                </div>
+
+                                <h4>Links</h4>
+                                    <div class="container profile-links-data">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <h6 class="profile-link-header">Title</h6>
+                                            </div>
+                                            <div class="col-1">
+                                                
+                                            </div>
+                                            <div class="col-5">
+                                                <h6 class="profile-link-header">URL</h6>
+                                            </div>
+                                            <div class="col-1">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <input type="text" class="form-control" id="profile-link-title" name="profile-link-title" value="YouTube" />
+                                            </div>
+                                            <div class="col-1">
+                                                <i class="fas fa-arrow-right profile-right-arrow text-center"></i>
+                                            </div>
+                                            <div class="col-5">
+                                                <input type="text" class="form-control" id="profile-link-url" name="profile-link-url" value="https://www.youtube.com/watch?v=_yx7-pYX8bc" />
+                                            </div>
+                                            <div class="col-1">
+                                                <a href="#">
+                                                    <i class="fas fa-times cross-ele"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                                <br />
+                                <button class="btn btn-light">Add Another Link</button>
+                                <hr />
+                                <form action="/Kanbas/Account/Profile/profile.html">
+                                    <button class="btn btn-color edit-profile-btns float-end">Cancel</button>
+                                    <button class="btn btn-danger edit-profile-btns float-end">Save Profile</button>
+                                </form>
+                                <br /><br>
+                                <br /><br>  
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Edit profile -->
+                    <div class="col-3 pe-4 d-none d-md-block">
+
+                        <div id="profile-data-edit-details" class="profile-data-edit-details text-center">
+                            <form action="/Kanbas/Account/Profile/profile.html">
+                                <button class="btn btn-color btn-edit-profile"><i class="fas fa-pencil-alt profile-edit-icon"></i>  Cancel Editing</button>
+                            </form>
+                        </div>
+
+                    </div>
                     
-                    </div>
-                    </div>
+
                 </div>
             </div>
+            
+            
+
+        </div>
     </div>
-</body>
+    </body>
 </html>
