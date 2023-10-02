@@ -17,6 +17,15 @@
     text-decoration: none;
 }
 
+a.red-color{
+    text-decoration: none;
+}
+
+a.red-color:hover{
+    text-decoration: underline;
+    color: var(--black-color);
+}
+
 .nav-link:hover{
     text-decoration: none;
     color: var(--black-color);
@@ -49,14 +58,14 @@
     width: 56%;
 }
 
-.second-nav-items-fixed{
+/* .second-nav-items-fixed{
     list-style-type: none;
     font-size: 0.6875rem;
     font-style: italic;
     color: var(--profile-line-selected-nav-item);
     margin-bottom: 2px;
     list-style-type: none;
-}
+} */
 
 .breadcrumb-position{
     position: relative;

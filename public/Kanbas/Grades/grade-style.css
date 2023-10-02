@@ -7,15 +7,17 @@
     --profile-header-hr-line:#c7cdd1;
 }
 
+.black-icon-color{
+    color: var(--black-color);
+}
 
-.second-nav-items-fixed{
-    list-style-type: none;
+/* .second-nav-items-fixed{
     font-size: 0.6875rem;
     font-style: italic;
     color: var(--profile-line-selected-nav-item);
     margin-bottom: 2px;
     list-style-type: none;
-}
+} */
 
 .breadcrumb-position{
     position: relative;
@@ -24,7 +26,7 @@
 
 .grades-btn{
     display: inline-block;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .grades-btn i{
@@ -32,7 +34,7 @@
 }
 
 .btns-display{
-    padding: 10px;
+    /* padding: 10px; */
     display:flex;
     justify-content: right;
 }
@@ -44,26 +46,26 @@
 
 .grades-filter-item{
     flex: 1;
-    margin-right: 10px; 
+    /* margin-right: 10px;  */
 }
 
 .grades-filter-item label{
     font-weight: bold;
 }
 
-.grades-apply-filter {
+/* .grades-apply-filter {
     margin-top: 15px;
-}
+} */
 
 .grades-apply-filter button i{
     color: var(--black-color);
 }
 
-.grades-table {
+/* .grades-table {
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
-}
+} */
 
 .table-header-assignment {
     font-weight: 400;

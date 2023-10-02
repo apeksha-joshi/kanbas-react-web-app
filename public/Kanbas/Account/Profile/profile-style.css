@@ -173,7 +173,7 @@ body{
 
 .contact-details a{
     color: var(--main-nav-red-color);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .profile-data-edit-details{
@@ -252,3 +252,35 @@ body{
 .test-scroll {
     overflow-y: auto;
 }
+
+.link-color{
+    color: var(--profile-nav-item-color);
+}
+
+/* .courses-nav-container{
+    position: relative;
+    display: block;
+    top: 0;
+    height: 70%;
+    width: 70%;
+   
+    padding-right: 12;
+    padding-bottom: 25px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.custom-nav-height{
+    height: 60px;
+}
+
+.course-nav-items a{
+    padding: 8px 0 8px 6px;
+    text-decoration: none;
+    color: var(--profile-nav-item-color);
+}
+
+.course-nav-items a:hover{
+    text-decoration: underline;
+    color: var(--black-color);
+} */

@@ -49,8 +49,13 @@
     background-color: var(--card-color-2);
 }
 
-.card-style{
+.card{
     width: 270px;
+    margin-right: 0px;
+}
+
+.card-style{
+    width: 300px;
     margin-right: 40px;
     margin-bottom: 40px
 }
@@ -60,6 +65,13 @@
 
 /* @media (max-width: 500px) {
     .card-style{
+        width: 100%;
+        margin-right:10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card{
         width: 100%;
     }
 } */

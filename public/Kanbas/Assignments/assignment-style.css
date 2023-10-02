@@ -7,6 +7,7 @@
     --profile-header-hr-line:#c7cdd1;
     --assignment-content-tick-icon: #39c63c;
     --btn-background-light-grey:#f5f5f5;
+    --card-header-color:#636464;
 }
 
 /* Not working */
@@ -25,11 +26,20 @@
     }
 } */
 
+.list-group, .list-group-item{
+    border-radius: 0px;
+}
+
 /* ********************** */
 .content-header a.breadcrumb-noactive-link {
     color: var(--profile-nav-item-color);
 }
 
+
+.card-list-item-header a{
+    text-decoration: none;
+    color: var(--card-header-color)
+}
 .assignmt-student-view-btn {
     display:flex;
     justify-content: right;
@@ -45,7 +55,7 @@
 
 .filter-assignments {
     display: flex;
-    margin: 10px;
+    /* margin: 10px; */
     justify-content: space-between  ;
 }
 
@@ -62,14 +72,14 @@
     color: var(--white-color);
 }
 
-.second-nav-items-fixed{
+/* .second-nav-items-fixed{
     list-style-type: none;
     font-size: 0.6875rem;
     font-style: italic;
     color: var(--profile-line-selected-nav-item);
     margin-bottom: 2px;
     list-style-type: none;
-}
+} */
 
 .breadcrumb-position{
     position: relative;
@@ -95,12 +105,12 @@
     color: var(--black-color);
 }
 
-.list-header-right-text{
+/* .list-header-right-text{ */
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    margin-right: 20px;
-}
+    /* margin-right: 20px; */
+/* } */
 
 .card-list-item {
     display: flex;
@@ -112,17 +122,17 @@
     margin-left: auto;
   } */
 
-  .card-list-item .mb-2 {
-    margin-top: 10px; /* Add space below the header */
-  }
+  /* .card-list-item .mb-2 {
+    margin-top: 10px; 
+  } */
 
 .card-list-item-header{
     font-weight: bold;
 }
 
-.card-list-item .d-flex small {
+/* .card-list-item .d-flex small {
     margin-right: 10px;
-}
+} */
 
 
 .list-item-row{
@@ -141,14 +151,14 @@
     align-items: center;
 }
 
-.list-item-drag-icon i{
+/* .list-item-drag-icon i{
     margin-right: 15px;
-}
+} */
 
-.list-item-option-icon i{
+/* .list-item-option-icon i{
     margin-right: 20px;
 
-}
+} */
 
 .list-item-option-icon{
     align-items: center;
@@ -169,7 +179,7 @@
     float: right;
     justify-content: end;
     align-items: center;
-    margin: 8px;
+    /* margin: 8px; */
     display: flex;
 }
 

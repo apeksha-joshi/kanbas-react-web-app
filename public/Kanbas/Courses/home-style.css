@@ -8,6 +8,7 @@
     --assignment-content-tick-icon: #39c63c;
     --btn-background-light-grey:#f5f5f5;
     --list-item-color:#636464;
+    --secondary-bg-color-header:#e2e3e5;
 }
 
 .tick-icon{
@@ -18,14 +19,15 @@
     overflow-x:hidden;
 }
 
-.second-nav-items-fixed{
+/* .second-nav-items-fixed{
     list-style-type: none;
     font-size: 0.6875rem;
     font-style: italic;
     color: var(--profile-line-selected-nav-item);
-    margin-bottom: 2px;
+    margin-bottom: 7px;
     list-style-type: none;
-}
+    padding-left: 8px;
+} */
 
 @media (max-width: 540px){
     .page-content{
@@ -35,6 +37,10 @@
 
 .btn-color{
     background-color: var(--btn-background-light-grey);
+}
+
+.secondary-color{
+    background-color: var(--secondary-bg-color-header);
 }
 
 .icon-colors{
