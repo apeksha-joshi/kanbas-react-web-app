@@ -5,7 +5,15 @@
     --profile-nav-item-color:#b52828;
     --profile-line-selected-nav-item:#2d3b45;
     --profile-header-hr-line:#c7cdd1;
+    --dashboard-heading-color: #6c757d;
+    --card-title-color: #5199d6;
+    --card-color-1:#927005;
+    --card-color-2:#3c4f36;
+    --assignment-content-tick-icon: #39c63c;
     --btn-background-light-grey:#f5f5f5;
+    --list-item-color:#636464;
+    --secondary-bg-color-header:#e2e3e5;
+    --card-header-color:#636464;
 }
 
 body * {
@@ -16,15 +24,6 @@ body{
     margin: 0;
 }
 
-/* .flex-row-container{
-    display:flex;
-    flex-direction: row;
-}
-
-.flex-grow-1{
-    flex-grow: 1;
-} */
-
 .second-nav-container{
     height: 100%;
     overflow: hidden;
@@ -33,7 +32,6 @@ body{
 .profile-wrapper{
     box-sizing: border-box;
     min-height: 100vh;
-    /* margin-left: 85px; */
     display: flex;
     flex-direction: column;
     padding-right:0 ;
@@ -45,100 +43,10 @@ body{
     overflow-x: hidden;
 }
 
-/* .profile-header{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--profile-header-hr-line);
-    margin: 0 24px;
-    min-height: 4.5rem;
-    box-sizing: border-box;
-} */
-/* .profile-nav-size{
-    width: 12%;
-} */
-/* .profile-nav-toggle{
-    margin-right: 12px;
-    padding: 0;
-    width: 36px;
-    height: 30px;
-    border-color: transparent;
-    cursor: pointer;
-    color: var(--main-nav-red-color);
-    background-color: var(--white-color);;
-} */
-/* .menu-button{
-    color: var(--main-nav-red-color);
-} */
-
-/* .profile-nav{
-    position: relative;
-    display: block;
-    top: 0;
-    height: 100%;
-    width: 190px;
-    padding: 25px 12px 25px 20px;
-    box-sizing: border-box; */
-    /* overflow-y: auto;
-    overscroll-behavior-y: contain; */
-/* } */
-
-/* .profile-nav-list{
-    padding: 0%;
-} */
-/* .profile-nav-items{
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 15px 0 15px;
-    padding: 0;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: var(--profile-nav-item-color);
-} */
-
-
-/* .profile-user-name a{
-    text-decoration: none;
-    color: var(--profile-line-selected-nav-item);
-} */
-
-/* .profile-user-name a:hover{
-    text-decoration: underline;
-    color: var(--profile-line-selected-nav-item);
-}
-.profile-nav-items a{
-    padding: 8px 0 8px 6px;
-    text-decoration: none;
-    color: var(--profile-nav-item-color);
-} */
-
-/* .profile-nav-items a.profile {
-    border-left: 2px solid var(--profile-line-selected-nav-item);
-    border-radius: 0px;
-    font-weight: bold;
-    color: var(--profile-line-selected-nav-item);
-    padding-left: 4px;
-    padding: 8px 0 8px 6px;
-} */
-/* 
-.profile-nav-items a.profile:hover {
-    text-decoration: underline;
-    color: var(--profile-line-selected-nav-item);
-} */
-/* 
-.profile-nav-items a:hover {
-    text-decoration: underline;
-    color: inherit;
-} */
-
 .profile-avatar{
-    /* margin-right: 20px; */
     float: left;
-    /* position: relative; */
     width: 158px;
     height: 128px;
-    /* top: 20px; */
 }
 
 
@@ -146,9 +54,6 @@ body{
     width: 128px;
     height: 128px;
     font-size: 130px;
-    /* position: relative;
-    top: 30px;
-    left: 60px; */
 }
 
 
@@ -209,10 +114,6 @@ body{
 }
 
 
-/* .small-nav-bar {
-    padding: 10px 20px 10px 20px;
-    background-color: #000000;
-} */
 
 .small-profile-nav {
     float: right;
@@ -256,31 +157,3 @@ body{
 .link-color{
     color: var(--profile-nav-item-color);
 }
-
-/* .courses-nav-container{
-    position: relative;
-    display: block;
-    top: 0;
-    height: 70%;
-    width: 70%;
-   
-    padding-right: 12;
-    padding-bottom: 25px;
-    margin-top: 40px;
-    box-sizing: border-box;
-}
-
-.custom-nav-height{
-    height: 60px;
-}
-
-.course-nav-items a{
-    padding: 8px 0 8px 6px;
-    text-decoration: none;
-    color: var(--profile-nav-item-color);
-}
-
-.course-nav-items a:hover{
-    text-decoration: underline;
-    color: var(--black-color);
-} */

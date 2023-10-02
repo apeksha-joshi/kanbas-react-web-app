@@ -6,6 +6,15 @@
     --profile-nav-item-color:#b52828;
     --profile-line-selected-nav-item:#2d3b45;
     --profile-header-hr-line:#c7cdd1;
+    --dashboard-heading-color: #6c757d;
+    --card-title-color: #5199d6;
+    --card-color-1:#927005;
+    --card-color-2:#3c4f36;
+    --assignment-content-tick-icon: #39c63c;
+    --btn-background-light-grey:#f5f5f5;
+    --list-item-color:#636464;
+    --secondary-bg-color-header:#e2e3e5;
+    --card-header-color:#636464;
 }
 
 body * {
@@ -47,7 +56,6 @@ body{
         max-height: none; 
         overflow-y: auto;
         overscroll-behavior-y: contain;
-        /* overflow-x: auto; */
         width: 100px;
     }
 }
@@ -59,27 +67,14 @@ body{
     width: 85px;
     z-index: 100;
     background-color: var(--black-color);
-    /* overflow-y: auto; */
-    /* max-height: 100vh; */
     overflow-x: hidden;
-    /* height: 100vh; */
 }
-
-/* @media (min-height: 500px) {
-    .app-nav-col {
-        max-height: none; 
-        overflow-y: auto;
-        overscroll-behavior-y: contain;
-        overflow-x: hidden;
-    }
-} */
 
 
 .neu-logo-container{
     width: 100%;
     background-color: var(--black-color);
     box-sizing: border-box;
-    /* z-index: -1; */
 }
 
 .neu-logo{
@@ -145,7 +140,6 @@ body{
 
 
 .nav-menu-icon-container{
-    /* transform: translate3d(0, 0, 0); */
     position: relative;
     z-index: 1;
     width: 48px;
@@ -189,8 +183,8 @@ body{
     overflow: hidden;
     box-sizing: border-box;
     vertical-align: middle;
-    display: flex; /* Use flex to center vertically and horizontally */
-    justify-content: center; /* Center horizontally */
+    display: flex; 
+    justify-content: center; 
     align-items: center; 
     width: 40px;
     height: 40px;
@@ -209,7 +203,6 @@ body{
     top: 0;
     height: 70%;
     width: 70%;
-    /* padding: 25px 12px 25px 20px; */
     padding-right: 12;
     padding-bottom: 25px;
     margin-top: 40px;
@@ -222,14 +215,11 @@ body{
     top: 0;
     height: 70%;
     width: 70%;
-    /* padding: 25px 12px 25px 20px; */
     padding-right: 12;
     padding-bottom: 25px;
     margin-top: 40px;
     margin-left: 30px;
     box-sizing: border-box;
-    /* overflow-y: auto;
-    overscroll-behavior-y: contain; */
 }
 
 
@@ -257,7 +247,7 @@ body{
     border-radius: 3px;
     color: var(--white-color);
     white-space: nowrap;
-    text-align: center; /* Center text horizontally */
+    text-align: center; 
     margin-top: 5px;
     width: 85px;
 }
@@ -277,7 +267,6 @@ body{
 .content-header{
     display: flex;
     align-items: center;
-    /* border-bottom: 1px solid var(--profile-header-hr-line); */
     margin: 0 24px;
     min-height: 4.5rem;
     box-sizing: border-box;
@@ -328,14 +317,11 @@ body{
     top: 0;
     height: 100%;
     width: 190px;
-    /* padding: 25px 12px 25px 20px; */
     padding-right: 12;
     padding-bottom: 25px;
     margin-top: 25px;
     margin-left: 20px;
     box-sizing: border-box;
-    /* overflow-y: auto;
-    overscroll-behavior-y: contain; */
 }
 
 .second-nav-list{
@@ -398,7 +384,6 @@ body{
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
-    /* margin: 0px 0 15px; */
     padding-right: 10px;
     white-space: normal;
     overflow: hidden;
@@ -448,11 +433,7 @@ li.second-nav-items-fixed{
     text-decoration: underline;
     color: var(--profile-line-selected-nav-item);
 }
-/* 
-.course-nav-items a{
-    text-decoration: underline;
-    color: var(--profile-line-selected-nav-item);
-} */
+
 
 .kanbas-nav-items a{
     text-decoration: none;
