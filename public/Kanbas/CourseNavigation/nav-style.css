@@ -51,7 +51,7 @@ body{
     height: 100%;
 }
 
-@media (max-height: 646px) {
+@media (max-height: 670px) {
     .app-nav-col {
         max-height: none; 
         overflow-y: auto;
@@ -96,9 +96,9 @@ body{
 
 .nav-menu li {
     margin: 5px 0px 5px 0px;
-    padding: 0;
+    padding: 10px 0px 10px 0px;
     justify-content: center;
-    height: 55px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -248,7 +248,7 @@ body{
     color: var(--white-color);
     white-space: nowrap;
     text-align: center; 
-    margin-top: 5px;
+    margin: 5px;
     width: 85px;
 }
 
