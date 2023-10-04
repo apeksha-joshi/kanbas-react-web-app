@@ -51,7 +51,7 @@ body{
     height: 100%;
 }
 
-@media (max-height: 630px) {
+@media (max-height: 646px) {
     .app-nav-col {
         max-height: none; 
         overflow-y: auto;
@@ -95,10 +95,10 @@ body{
 }
 
 .nav-menu li {
-    /* margin: 5px 0px 5px 0px; */
-    /* padding: 10px 0px 10px 0px; */
+    margin: 5px 0px 5px 0px;
+    padding: 0;
     justify-content: center;
-    height: 60px;
+    height: 55px;
     display: flex;
     align-items: center;
 }
@@ -132,12 +132,12 @@ body{
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    height: 65px;
+    height: 55px;
     display: block;
     color: var(--white-color);
     border-style: none;
-    padding: 5px;
-    margin: 5px;
+    /* padding: 5px;
+    margin: 5px; */
 }
 
 
