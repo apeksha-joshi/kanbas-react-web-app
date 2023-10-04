@@ -51,7 +51,7 @@ body{
     height: 100%;
 }
 
-@media (max-height: 670px) {
+@media (max-height: 630px) {
     .app-nav-col {
         max-height: none; 
         overflow-y: auto;
@@ -95,8 +95,8 @@ body{
 }
 
 .nav-menu li {
-    margin: 5px 0px 5px 0px;
-    padding: 10px 0px 10px 0px;
+    /* margin: 5px 0px 5px 0px; */
+    /* padding: 10px 0px 10px 0px; */
     justify-content: center;
     height: 60px;
     display: flex;
@@ -132,10 +132,12 @@ body{
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    height: 55px;
+    height: 65px;
     display: block;
     color: var(--white-color);
     border-style: none;
+    padding: 5px;
+    margin: 5px;
 }
 
 
