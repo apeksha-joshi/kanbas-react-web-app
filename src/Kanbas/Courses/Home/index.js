@@ -22,7 +22,7 @@ function Home() {
     const modules_json = db.modules;
     const course_modules = modules_json.filter((module) => module.course_id===courseId);
     const courseTasks = db.course_tasks.find((task) => task.course_id===courseId);
-    
+    const course = db.courses.find((course) => course._id === courseId);
     return(
         <>
             <div className="col-12 col-lg-10 col-xl-7">
@@ -129,7 +129,7 @@ function Home() {
                                 <i className="far icon-colors me-1">{icons['Calendar']}</i>
                                 <div className="ps-3">
                                     <Link to={upcoming_item.path} className="ps-3">{upcoming_item.name}</Link><br />
-                                    <small className="ps-3">{upcoming_item.course_section}</small><br />
+                                    <small className="ps-3">{`${course.number}.${course.section}.${course.startDate.split('-')[0]}${course.startDate.split('-')[2]}`}</small><br />
                                     <small className="ps-3">{upcoming_item.date}</small>
                                 </div>
                             </div>
