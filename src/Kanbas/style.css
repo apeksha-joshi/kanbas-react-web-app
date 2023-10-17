@@ -206,31 +206,58 @@ body{
     display: inline-block;
 }
 
+i.account-icon-grey{
+    color: var(--dashboard-heading-color);
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
 .courses-nav-container{
     position: relative;
-    display: block;
+    /* display: block; */
     top: 0;
-    height: 70%;
-    width: 70%;
+    /* height: 70%;
+    width: 70%; */
     padding-right: 12;
     padding-bottom: 25px;
-    margin-top: 40px;
+    transform: translate3d(-16.8px, 48px, 0px);
+    /* margin-top: 40px; */
     box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 .kanbas-nav-container{
     position: relative;
-    display: block;
+    /* display: block; */
     top: 0;
-    height: 70%;
-    width: 70%;
+    /* height: 70%; */
+    width: 300px;
     padding-right: 12;
     padding-bottom: 25px;
-    margin-top: 40px;
-    margin-left: 30px;
+    /* margin-top: 40px;
+    margin-left: 30px; */
+    background-color: var(--white-color);
     box-sizing: border-box;
 }
 
+.kanbas-nav-container .kanbas-nav-items:hover{
+    color: var(--black-color);
+    text-decoration: underline;
+}
+
+.course-nav-items:hover{
+    color: var(--black-color);
+    text-decoration: underline;
+}
+
+.courses-nav-container .course-nav-items:hover, .course-nav-items:focus{
+    background-color: var(--white-color);
+}
+
+.kanbas-nav-container .kanbas-nav-items:hover, .kanbas-nav-items:focus{
+    background-color: var(--white-color);
+}
 
 .kanbas-nav{
     width: 200px;
@@ -247,6 +274,8 @@ body{
     vertical-align: middle;
     display: inline-block;
 }
+
+
 
 .nav-menu-item-text{
     background-color: black;
@@ -445,6 +474,11 @@ li.second-nav-items-fixed{
     text-decoration: underline;
     color: var(--black-color);
 }
+
+.kanbas-nav-items:hover i{
+    color: var(--black-color);
+}
+
 
 .second-nav-items a:hover {
     text-decoration: underline;

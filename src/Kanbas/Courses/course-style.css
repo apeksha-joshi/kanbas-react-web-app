@@ -16,7 +16,9 @@
     --card-header-color:#636464;
 }
 
-
+.dropdown-toggle::after {
+    content: none;
+}
 
 .student-view-btn {
     display:flex;

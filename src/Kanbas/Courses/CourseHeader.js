@@ -1,21 +1,57 @@
-import { FaBars, FaChevronDown, FaGlasses } from "react-icons/fa";
+import { FaBars, FaBook, FaBullhorn, FaBullseye, FaCalendarAlt, FaChevronDown, FaCircleNotch, FaClipboard, FaClock, FaCog, FaComments, FaEdit, FaEnvelopeOpenText, FaFileAlt, FaFolder, FaGlasses, FaHome, FaMendeley, FaPlug, FaQuestionCircle, FaRocket, FaSignOutAlt, FaTachometerAlt, FaTv, FaUser, FaUserFriends } from "react-icons/fa";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import db from "../Database";
-import { useEffect } from "react";
+import { Dropdown } from "react-bootstrap";
+import React, { useState } from 'react';
 
 function CourseHeader() { 
-
     const { courseId } = useParams();
+    const course_nav_items = db.course_nav;
     const fragment = window.location.hash;
     const segments = fragment.split('/');
     const courseIdx = segments.indexOf(courseId)
-
+    const kanbas_nav_items = db.kanbas_nav_items;
     const course = db.courses.find((course) => course._id === courseId);
+    const style = {
+        position:'absolute',
+        inset: '0px 0px auto auto',
+        transform: 'translate3d(-280.8px, 48px, 0px)'}
     const icons = {
         Menu : <FaBars size="1.4em" />,
         Down:<FaChevronDown />,
-        Glasses:<FaGlasses />
+        Glasses:<FaGlasses />,
+        Account: <FaUser />,
+        Dashboard: <FaTachometerAlt size="1.4em"/>,
+        Courses: <FaBook size="1.4em" />,
+        Calendar: <FaCalendarAlt size="1.4em" />,
+        Inbox:<FaEnvelopeOpenText size="1.4em" />,
+        History:<FaClock size="1.4em" />,
+        Studio:<FaTv size="1.4em" />,
+        Commons:<FaSignOutAlt size="1.4em" />,
+        Help:<FaQuestionCircle size="1.4em" />,
+    }
+
+    const courseIcons = {
+        Home:<FaHome />,
+        Modules:<FaMendeley />,
+        Piazza:<FaPlug />,
+        'Progress Reports (EAB Navigate)':<FaPlug />,
+        'Zoom Meetings':<FaPlug />,
+        'Panopto Video':<FaPlug />,
+        Assignments:<FaEdit />,
+        Quizzes:<FaRocket />,
+        Grades:<FaFileAlt />,
+        People:<FaUserFriends />,
+        Discussions:<FaComments />,
+        Announcements:<FaBullhorn />,
+        Pages:<FaFileAlt />,
+        Files:<FaFolder /> ,
+        Rubrics:<FaClipboard />,
+        Outcomes:<FaBullseye />,
+        Collaborations:<FaCircleNotch />,
+        Syllabus:<FaFileAlt />,
+        Settings:<FaCog />,
     }
     return(
         <>
@@ -26,26 +62,41 @@ function CourseHeader() {
                     <div className="top-nav-bar">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-between">
                             <li className="nav-item">
-                                <div className="dropdown">
-                                    <Link className="btn btn-dark" to="" role="button">{icons['Menu']}</Link>
+                                <Dropdown>
+                                    <Dropdown.Toggle className={`btn btn-dark`}>
+                                        <i>{icons['Menu']}</i>
+                                    </Dropdown.Toggle>
 
-                                    <ul className="p-4 dropdown-menu">
-                                            <li className="kanbas-nav-items"><a href="/Kanbas/Dashboard/dashboard.html" className="second-nav-item-text"><i className="fas fa-tachometer-alt menu-icons fa-lg me-3"></i>Dashboard</a></li>
-                                        
-                                    </ul>
-                                </div>
+                                    <Dropdown.Menu className="kanbas-nav-container p-3 border border-secondary-subtle border border-3">
+                                        {kanbas_nav_items.map((kanbas_item)=>{
+                                            return(
+                                                <Dropdown.Item key={kanbas_item._id} href={`#${kanbas_item.path}`} className="kanbas-nav-items ps-4">
+                                                    <i className={`me-3 ${kanbas_item.name==="Account" ? "account-icon-grey":"menu-icons"}`}>{icons[`${kanbas_item.name}`]}</i>{kanbas_item.name}
+                                                </Dropdown.Item>
+                                            );
+                                        })}
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </li>
                             <li className="nav-item">
                                 <p className="text-center">{`${course.number}.${course.section}.${course.startDate.split('-')[0]}${course.startDate.split('-')[2]}`}<br />{segments[courseIdx + 1]}</p>
                             </li>
                             <li className="nav-item">
-                                <div className="dropdown">
-                                    <Link className="btn btn-dark" to="" role="button">{icons['Down']}</Link>                 
-                                    <ul className="p-4 dropdown-menu">
+                                    <Dropdown drop="dropdown-centered">
+                                        <Dropdown.Toggle className={`btn btn-dark`}>
+                                            <i>{icons['Down']}</i>
+                                        </Dropdown.Toggle>
 
-
-                                    </ul>
-                                </div>
+                                        <Dropdown.Menu className="courses-nav-container p-4" style={style}>
+                                            {course_nav_items.map((course_item) => {
+                                                return (
+                                                    <Dropdown.Item key={course_item._id} href={`#/Kanbas/Courses/${courseId}/${course_item.link!=="undefined"?course_item.link:""}`} className="course-nav-items ps-4">
+                                                        <i className="me-3 menu-icons">{courseIcons[`${course_item.name}`]}</i>{course_item.name}
+                                                    </Dropdown.Item>
+                                                );
+                                            })}
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                             </li>
                         </ul>
                     </div>

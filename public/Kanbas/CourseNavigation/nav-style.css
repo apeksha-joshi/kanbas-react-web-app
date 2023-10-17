@@ -213,7 +213,7 @@ body{
 
 .kanbas-nav-container{
     position: relative;
-    display: block;
+    /* display: block; */
     top: 0;
     height: 70%;
     width: 70%;
