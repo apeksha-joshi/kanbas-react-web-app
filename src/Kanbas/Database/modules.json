@@ -1,0 +1,523 @@
+[
+    {
+        "_id": "CS5610_M1",
+        "course_id": "CS5610",
+        "module_header": "Resources",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "Graduate Calendar",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Office Hours",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Piazza",
+                "module_item_list": []
+            }
+        ]
+    },
+    {
+        "_id": "CS5610_M2",
+        "course_id": "CS5610",
+        "module_header": "Week 0 - INTRO",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to the course",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Learn What is Web Development",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Creating a development environment",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Creating a Web Application",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Full Stack Developer - Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Full Stack Developer - Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Web Development",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "Week 0",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS5610_M3",
+        "course_id": "CS5610",
+        "module_header": "Week 1 - HTML CSS",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to HTML",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Lab",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Full Stack Developer - Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Full Stack Developer - Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "HTML",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "CSS",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS6140_M1",
+        "course_id": "CS6140",
+        "module_header": "Resources",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "Graduate Calendar",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Office Hours",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Piazza",
+                "module_item_list": []
+            }
+        ]
+    },
+    {
+        "_id": "CS6140_M2",
+        "course_id": "CS6140",
+        "module_header": "Week 0 - INTRO",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to the course",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Learn What is Machine Learning",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Creating a development environment",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Machine Learning",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "Week 0",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS6140_M3",
+        "course_id": "CS6140",
+        "module_header": "Week 1 - Linear Regression",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Linear Regression",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Lab",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Linear Regression",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "Python",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS5800_M1",
+        "course_id": "CS5800",
+        "module_header": "Resources",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "Graduate Calendar",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Office Hours",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Piazza",
+                "module_item_list": []
+            }
+        ]
+    },
+    {
+        "_id": "CS5800_M2",
+        "course_id": "CS5800",
+        "module_header": "Week 0 - INTRO",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to the course",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Learn What is Algorithms",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Creating a development environment",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Algorithms",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "Arrays",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS5800_M3",
+        "course_id": "CS5800",
+        "module_header": "Week 1 - String",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Strings",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Lab",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Array",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "String",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS5010_M1",
+        "course_id": "CS5010",
+        "module_header": "Resources",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "Graduate Calendar",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Office Hours",
+                "module_item_list": []
+            },
+            {
+                "module_item_name": "Piazza",
+                "module_item_list": []
+            }
+        ]
+    },
+    {
+        "_id": "CS5010_M2",
+        "course_id": "CS5010",
+        "module_header": "Week 0 - INTRO",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to the course",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Learn What is PDP",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Creating a development environment",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to Java",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "Week 0",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "CS5010_M3",
+        "course_id": "CS5010",
+        "module_header": "Week 1 - Java OOPs",
+        "module_description": "",
+        "module_items": [
+            {
+                "module_item_name": "LEARNING OBJECTIVES",
+                "module_item_list": [
+                    {
+                        "name": "Introduction to OOPs",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Lab",
+                        "path": "",
+                        "is_link": false
+                    }
+                ]
+            },
+            {
+                "module_item_name": "READING",
+                "module_item_list": [
+                    {
+                        "name": "Chapter 1",
+                        "path": "",
+                        "is_link": false
+                    },
+                    {
+                        "name": "Chapter 2",
+                        "path": ""
+                    }
+                ]
+            },
+            {
+                "module_item_name": "SLIDES",
+                "module_item_list": [
+                    {
+                        "name": "Java",
+                        "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
+                        "is_link": true
+                    },
+                    {
+                        "name": "OOPs",
+                        "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
+                        "is_link": true
+                    }
+                ]
+            }
+        ]
+    }
+]

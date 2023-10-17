@@ -1,0 +1,102 @@
+[
+    {
+        "_id": "121",
+        "username": "pirate_king",
+        "password": "luffy123",
+        "firstName": "Luffy",
+        "lastName": "D",
+        "email": "luffy@d.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "122",
+        "username": "pirate_hunter",
+        "password": "zorro123",
+        "firstName": "Roranoa",
+        "lastName": "Zorro",
+        "email": "zorro@r.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "123",
+        "username": "pirate_cook",
+        "password": "vinsmoke123",
+        "firstName": "Sanji",
+        "lastName": "Vinsmoke",
+        "email": "sanji@v.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "124",
+        "username": "arch",
+        "password": "robin123",
+        "firstName": "Nico",
+        "lastName": "Robin",
+        "email": "nico@robin.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "125",
+        "username": "cyborg",
+        "password": "franky123",
+        "firstName": "Franky",
+        "lastName": "",
+        "email": "cyborg@robo.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "126",
+        "username": "akagami",
+        "password": "shanks123",
+        "firstName": "Shanks",
+        "lastName": "",
+        "email": "akagami@s.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "127",
+        "username": "dark_king",
+        "password": "silvers123",
+        "firstName": "Rayleigh",
+        "lastName": "Silvers",
+        "email": "akagami@s.com",
+        "dob": "1970-05-29",
+        "role": "STUDENT"
+    },
+    {
+        "_id": "128",
+        "username": "saint",
+        "password": "saint123",
+        "firstName": "Sengoku",
+        "lastName": "H",
+        "email": "sengoku@s.com",
+        "dob": "1970-05-29",
+        "role": "FACULTY"
+    },
+    {
+        "_id": "129",
+        "username": "garp_the_fist",
+        "password": "garp123",
+        "firstName": "Garp",
+        "lastName": "D",
+        "email": "garp@d.com",
+        "dob": "1970-05-29",
+        "role": "FACULTY"
+    },
+    {
+        "_id": "130",
+        "username": "kizaru",
+        "password": "kizaru123",
+        "firstName": "Borsalino",
+        "lastName": "K",
+        "email": "kizaru@b.com",
+        "dob": "1970-05-29",
+        "role": "FACULTY"
+    }
+]

@@ -1,0 +1,75 @@
+:root{
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --main-nav-red-color:#D41B2C;
+    --profile-nav-item-color:#b52828;
+    --profile-line-selected-nav-item:#2d3b45;
+    --profile-header-hr-line:#c7cdd1;
+    --dashboard-heading-color: #6c757d;
+    --card-title-color: #5199d6;
+    --card-color-1:#927005;
+    --card-color-2:#3c4f36;
+    --assignment-content-tick-icon: #39c63c;
+    --btn-background-light-grey:#f5f5f5;
+    --list-item-color:#636464;
+    --secondary-bg-color-header:#e2e3e5;
+    --card-header-color:#636464;
+}
+
+.black-icon-color{
+    color: var(--black-color);
+}
+
+.breadcrumb-position{
+    position: relative;
+    top: 7px;
+}
+
+.grades-btn{
+    display: inline-block;
+}
+
+.grades-btn i{
+    color: black;
+}
+
+.btns-display{
+    display:flex;
+    justify-content: right;
+}
+
+.grades-filter {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.grades-filter-item{
+    flex: 1;
+}
+
+.grades-filter-item label{
+    font-weight: bold;
+}
+
+.grades-apply-filter button i{
+    color: var(--black-color);
+}
+
+.table-header-assignment {
+    font-weight: 400;
+}
+
+.student-name-col {
+    color: var(--profile-nav-item-color) !important;
+}
+
+
+.grade-input {
+    border-color: var(--profile-nav-item-color);
+    outline: none;
+  }
+
+  .grade-input:focus {
+    border-color: var(--profile-nav-item-color);
+    outline: none;
+  }

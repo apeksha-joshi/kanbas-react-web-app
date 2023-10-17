@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "CS5610",
+    "name": "Web Development",
+    "number": "CS5610",
+    "section": "17387",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "semester": "Fall 2023",
+    "term": "Full",
+    "img_path": "card-1-color"
+  },
+  {
+    "_id": "CS6140",
+    "name": "Machine Learning",
+    "number": "CS6140",
+    "section": "17390",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "semester": "Fall 2023",
+    "term": "Full",
+    "img_path": "card-2-color"
+  },
+  {
+    "_id": "CS5800",
+    "name": "Algorithms",
+    "number": "CS5800",
+    "section": "16005",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "semester": "Fall 2023",
+    "term": "Full",
+    "img_path": "card-1-color"
+  },
+  {
+    "_id": "CS5010",
+    "name": "PDP",
+    "number": "CS5010",
+    "section": "17456",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "semester": "Fall 2023",
+    "term": "Full",
+    "img_path": "card-2-color"
+  }
+]

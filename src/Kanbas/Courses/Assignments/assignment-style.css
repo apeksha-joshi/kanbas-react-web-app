@@ -14,13 +14,14 @@
     --list-item-color:#636464;
     --secondary-bg-color-header:#e2e3e5;
     --card-header-color:#636464;
+    --upbublished-tick-color:#9cbb9c;
 }
 
 
 
 .second-nav-container{
     height: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 
@@ -38,10 +39,12 @@
     text-decoration: none;
     color: var(--card-header-color)
 }
-.assignmt-student-view-btn {
-    display:flex;
-    justify-content: right;
+
+.card-list-item-header a:hover{
+    text-decoration: underline;
+    color: var(--card-header-color)
 }
+
 
 .assignmt-student-view-btn i{
     color: var(--black-color);
@@ -67,10 +70,10 @@
 }
 
 
-.breadcrumb-position{
+/* .breadcrumb-position{
     position: relative;
     top: 7px;
-}
+} */
 
 .btn-color{
     background-color: var(--btn-background-light-grey);
@@ -121,6 +124,9 @@
     color: var(--assignment-content-tick-icon);
 }
 
+.tick-icon-fade{
+    color:var(--upbublished-tick-color);
+}
 
 .custom-button {
     border: none;
