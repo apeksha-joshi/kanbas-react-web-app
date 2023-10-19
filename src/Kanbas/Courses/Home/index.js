@@ -62,6 +62,9 @@ function Home() {
                         }
                     </div>
                 </div>
+                <br />
+                <br />
+                <br />
             </div>
 
             <div className="col-3 mt-2 ps-4 d-none d-xl-block">
