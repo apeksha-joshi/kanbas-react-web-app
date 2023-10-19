@@ -17,10 +17,10 @@ function TemplateLiterals(){
     return(
         <>
             <h1>Template Literals</h1>
-            <p>result1 = {result1}</p>
-            <p>result2 = {result2}</p>
-            <p>greeting1 = {greeting1}</p>
-            <p>greeting2 = {greeting2}</p>
+            result1 = {result1}<br />
+            result2 = {result2}<br />
+            greeting1 = {greeting1}<br />
+            greeting2 = {greeting2}<br />
         </>
     );
 }

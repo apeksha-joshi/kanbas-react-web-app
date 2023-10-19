@@ -9,8 +9,8 @@ function AddingAndRemovingDataToFromArrays(){
     return(
         <>
             <h1>Add and remove data to arrays</h1>
-            <p>numberArray1 = {numberArray1}</p>
-            <p>stringArray1 = {stringArray1}</p>
+            numberArray1 = {numberArray1}<br />
+            stringArray1 = {stringArray1}<br />
         </>
     );
 }

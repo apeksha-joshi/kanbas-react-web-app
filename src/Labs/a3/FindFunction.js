@@ -8,8 +8,8 @@ function FindFunction(){
     return(
         <>
             <h1>Find function</h1>
-            <p>four = {four}</p>
-            <p>string3 = {string3}</p>
+            four = {four}<br />
+            string3 = {string3}<br />
         </>
     );
 }

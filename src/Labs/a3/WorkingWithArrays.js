@@ -13,9 +13,9 @@ function WorkingWithArrays(){
     return(
         <>
             <h1>Working with Arrays</h1>
-            <p>numberArray1 = {numberArray1}</p>
-            <p>stringArray1 = {stringArray1}</p>
-            <p>variableArray1 = {variableArray1}</p>
+            numberArray1 = {numberArray1}<br />
+            stringArray1 = {stringArray1}<br />
+            variableArray1 = {variableArray1}<br />
         </>
     );
 }

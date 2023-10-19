@@ -70,7 +70,7 @@ function CourseHeader() {
                                     <Dropdown.Menu className="kanbas-nav-container p-3 border border-secondary-subtle border border-3">
                                         {kanbas_nav_items.map((kanbas_item)=>{
                                             return(
-                                                <Dropdown.Item key={kanbas_item._id} href={`#${kanbas_item.path}`} className="kanbas-nav-items ps-4">
+                                                <Dropdown.Item key={kanbas_item._id} href={`#${kanbas_item.path.includes("Courses")? `/Kanbas/Courses/${courseId}` : kanbas_item.path}`} className="kanbas-nav-items ps-4">
                                                     <i className={`me-3 ${kanbas_item.name==="Account" ? "account-icon-grey":"menu-icons"}`}>{icons[`${kanbas_item.name}`]}</i>{kanbas_item.name}
                                                 </Dropdown.Item>
                                             );
@@ -88,9 +88,11 @@ function CourseHeader() {
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu className="courses-nav-container p-4" style={style}>
-                                            {course_nav_items.map((course_item) => {
+                                            {
+                                            
+                                            course_nav_items.map((course_item) => {
                                                 return (
-                                                    <Dropdown.Item key={course_item._id} href={`#/Kanbas/Courses/${courseId}/${course_item.link!=="undefined"?course_item.link:""}`} className="course-nav-items ps-4">
+                                                    <Dropdown.Item key={course_item._id} href={`#/Kanbas/Courses/${courseId}/${course_item.link!=="undefined"?course_item.link: segments.slice(courseIdx+1).length===1 ? segments[courseIdx+1]:`${segments[courseIdx+1]}/${segments[courseIdx+2]}`}`} className="course-nav-items ps-4">
                                                         <i className="me-3 menu-icons">{courseIcons[`${course_item.name}`]}</i>{course_item.name}
                                                     </Dropdown.Item>
                                                 );

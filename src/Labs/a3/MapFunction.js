@@ -8,8 +8,8 @@ function MapFunction(){
     return(
         <>
             <h3>Map</h3>
-            <p>squares = {squares}</p>
-            <p>cubes = {cubes}</p>
+            squares = {squares}<br />
+            cubes = {cubes}<br />
         </>
     );
 }

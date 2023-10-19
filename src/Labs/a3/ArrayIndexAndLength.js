@@ -6,8 +6,8 @@ function ArrayIndexAndLength(){
     return(
         <>
             <h3>Array index and length</h3>
-            <p>length1 = {length1}</p>
-            <p>index1 = {index1}</p>
+            length1 = {length1}<br />
+            index1 = {index1}<br />
         </>
     );
 }

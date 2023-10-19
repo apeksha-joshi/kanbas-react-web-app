@@ -8,9 +8,9 @@ function FilterFunction(){
     return(
         <>
             <h3>Filter function</h3>
-            <p>numbersGreaterThan2 = {numbersGreaterThan2}</p>
-            <p>evenNumbers = {evenNumbers}</p>
-            <p>oddNumbers = {oddNumbers}</p>
+            numbersGreaterThan2 = {numbersGreaterThan2}<br />
+            evenNumbers = {evenNumbers}<br />
+            oddNumbers = {oddNumbers}<br />
         </>
     );
 }

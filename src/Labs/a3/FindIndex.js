@@ -8,8 +8,8 @@ function FindIndex(){
     return(
         <>
             <h1>FindIndex function</h1>
-            <p>fourIndex = {fourIndex}</p>
-            <p>string3Index = {string3Index}</p>
+            fourIndex = {fourIndex}<br />
+            string3Index = {string3Index}<br />
         </>
     );
 }
