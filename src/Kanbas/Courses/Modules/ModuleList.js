@@ -20,7 +20,7 @@ function ModuleList({module}){
                     <button id="assignment-option" type="button" className="btn ps-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i className="icon-colors">{icons['VGrip']}</i>&nbsp;
                     </button>
-                    <strong><span className="list-item-color">{module.module_header}</span></strong>
+                    <strong><span className="list-item-color">{module.module_header}{module.module_description!==""? ` - ${module.module_description}`:""}</span></strong>
                 </div>
                 <div className="float-end list-header-right-text">
                     <div className="d-flex align-items-center">

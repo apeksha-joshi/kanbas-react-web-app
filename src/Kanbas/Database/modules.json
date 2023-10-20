@@ -23,7 +23,7 @@
         "_id": "CS5610_M2",
         "course_id": "CS5610",
         "module_header": "Week 0 - INTRO",
-        "module_description": "",
+        "module_description": "Understanding Web development basics",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -85,7 +85,7 @@
         "_id": "CS5610_M3",
         "course_id": "CS5610",
         "module_header": "Week 1 - HTML CSS",
-        "module_description": "",
+        "module_description": "Learn HTML CSS",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -157,7 +157,7 @@
         "_id": "CS6140_M2",
         "course_id": "CS6140",
         "module_header": "Week 0 - INTRO",
-        "module_description": "",
+        "module_description": "Understand Machine Learning",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -214,7 +214,7 @@
         "_id": "CS6140_M3",
         "course_id": "CS6140",
         "module_header": "Week 1 - Linear Regression",
-        "module_description": "",
+        "module_description": "Basic model",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -286,7 +286,7 @@
         "_id": "CS5800_M2",
         "course_id": "CS5800",
         "module_header": "Week 0 - INTRO",
-        "module_description": "",
+        "module_description": "What is algorithms",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -343,7 +343,7 @@
         "_id": "CS5800_M3",
         "course_id": "CS5800",
         "module_header": "Week 1 - String",
-        "module_description": "",
+        "module_description": "String datatype",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -415,7 +415,7 @@
         "_id": "CS5010_M2",
         "course_id": "CS5010",
         "module_header": "Week 0 - INTRO",
-        "module_description": "",
+        "module_description": "Java basics",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
@@ -472,7 +472,7 @@
         "_id": "CS5010_M3",
         "course_id": "CS5010",
         "module_header": "Week 1 - Java OOPs",
-        "module_description": "",
+        "module_description": "Grasp OOPs concepts",
         "module_items": [
             {
                 "module_item_name": "LEARNING OBJECTIVES",
