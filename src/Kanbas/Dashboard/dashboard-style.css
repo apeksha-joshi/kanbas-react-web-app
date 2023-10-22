@@ -16,6 +16,13 @@
     --card-header-color:#636464;
 }
 
+.edit-icon{
+    border: none;
+    background-color: var(--white-color);
+}
+
+
+
 @media (min-width: 1200px) {
     .app-nav-col {
       display: block;
@@ -26,6 +33,27 @@
     .app-nav-col {
       display: none;
     }
+}
+
+#addButton {
+    background-color: var(--profile-nav-item-color);
+}
+
+.courseForm {
+    position: absolute;
+    top:80px;
+    left: 400px;
+    width: 50%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseForm .form-label{
+    color: var(--white-color);
 }
 
 .dashboard-heading{
@@ -104,6 +132,10 @@
 
 .card-body i{
     color:var(--dashboard-heading-color);
+}
+
+.card-body i.delete-icon{
+    color: var(--profile-nav-item-color);
 }
 
 .dashboard-container{
