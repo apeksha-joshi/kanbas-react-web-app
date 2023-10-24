@@ -1,7 +1,11 @@
 import { useParams } from "react-router";
-import db from "../../Database";
 import ModuleList from "./ModuleList";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
+import { useState } from "react";
+import ModuleHeaderForm from "./ModuleHeaderForm";
+import AddModuleItemForm from './AddModuleItemForm';
+import { useDispatch, useSelector } from "react-redux";
+import {toggleHeaderForm, addModuleHeader, setSelectedModule} from './ModuleReducer';
 
 function Modules(){
     const icons = {
@@ -10,9 +14,41 @@ function Modules(){
         VEllipsis:<FaEllipsisV />
     }
     const {courseId} = useParams();
-    const modules = db.modules;
+    // const [modules, setModules] = useState(db.modules);
+    const newModuleVal = {
+        course_id:courseId,
+        module_header:"Enter Module Header",
+        module_description : "Enter Module Description",
+        module_items :[]
+    }
+
+    const modules = useSelector((state) => state.ModuleReducer.modules);
+    const moduleHeaderForm = useSelector((state) => state.ModuleReducer.moduleHeaderForm);
+    const newModule = useSelector((state) => state.ModuleReducer.module);
+    const addModuleItemForm = useSelector((state)=> state.ModuleReducer.addModuleItemForm);
+    const dispatch = useDispatch();
+    // const [newModule, setNewModule] = useState(newModuleVal);
+
+    // const [moduleHeaderForm, setModuleHeaderForm] = useState(false);
+
+    // const toggleHeaderForm = () => {
+    //     console.log("Inside toggle");
+    //     setModuleHeaderForm(!moduleHeaderForm);
+    // } 
+
     const course_modules = modules.filter((module) => module.course_id===courseId);
     
+    // const addModuleHeader = () => {
+    //     const newModule_id = `${courseId}_M${modules.length+1}`
+    //     setModules([...modules,
+    //         { ...newModule,
+    //         _id: newModule_id }]);
+    
+    //     toggleHeaderForm();
+    // }
+
+
+
     return (
         <>
             <div className="col-12 col-lg-10 pe-5">
@@ -26,7 +62,11 @@ function Modules(){
                                     <i className="me-2 tick-icon">{icons['Tick']}</i>Publish All
                                 </button>
                             </div>
-                            <button type="button" className="btn btn-danger mx-2"><i className="fas plus-color">{icons['Plus']}</i>&nbsp;Module</button>
+                            <button type="button" onClick=
+                                {() => {
+                                    dispatch(toggleHeaderForm()); 
+                                    dispatch(setSelectedModule(newModuleVal));
+                                }} className="btn btn-danger mx-2"><i className="fas plus-color">{icons['Plus']}</i>&nbsp;Module</button>
                             <button type="button" className="btn btn-light"><i className="icon-colors">{icons['VEllipsis']}</i></button>
                         </div>
                     </div>
@@ -38,6 +78,13 @@ function Modules(){
 
                 <div className="row">
                     <div className="course-content">
+
+                        {/* ModuleHeader Form */}
+
+                        {moduleHeaderForm && (<ModuleHeaderForm />)}
+
+                        {addModuleItemForm && (<AddModuleItemForm />)}
+
                         {/* ModuleList */}
                         {
                             course_modules.map(

@@ -5,11 +5,11 @@ const [count, setCount] = useState(7);
   return (
     <div>
       <h2>Counter: {count}</h2>
-      <button
+      <button className="btn btn-success me-2"
         onClick={() => setCount(count + 1)}>
         Up
       </button>
-      <button
+      <button className="btn btn-danger"
         onClick={() => setCount(count - 1)}>
         Down
       </button>

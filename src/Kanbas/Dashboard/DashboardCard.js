@@ -1,13 +1,15 @@
 import { FaEdit, FaEllipsisV, FaTrashAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {toggleCourseForm, setCourseSelectedBtn, setSelectedCourse, addNewCourse, updateCourse, deleteCourse} from './CourseReducer';
 
-function DashboardCard({course_item, toggleFunction, selectedBtnFunction, setSelectedCourse, deleteCourseFunction}) {
+function DashboardCard({course_item}) {
 
     const cardIcons = {
         Menu: <FaEllipsisV size="1.4em"/>,
         Edit: <FaEdit size="1.4em"/>,
         Delete:<FaTrashAlt />
     }
+    const dispatch = useDispatch();
 
     return(
         <div className="col card-style">
@@ -24,9 +26,9 @@ function DashboardCard({course_item, toggleFunction, selectedBtnFunction, setSel
                             className="edit-icon"
                             onClick={(e) => {
                                 e.preventDefault();
-                                selectedBtnFunction(e.target.id);
-                                toggleFunction();
-                                setSelectedCourse(course_item);
+                                dispatch(setCourseSelectedBtn(e.target.id));
+                                dispatch(toggleCourseForm());
+                                dispatch(setSelectedCourse(course_item));
                             }}>
                             <i className="far">{cardIcons['Edit']}</i></button>
 
@@ -34,7 +36,7 @@ function DashboardCard({course_item, toggleFunction, selectedBtnFunction, setSel
                             className="edit-icon"
                             onClick={(e) => {
                                 e.preventDefault();
-                                deleteCourseFunction(course_item._id);
+                                dispatch(deleteCourse(course_item._id));
                             }}>
                             <i className="delete-icon">{cardIcons['Delete']}</i></button>
                     </div>

@@ -6,14 +6,17 @@
         "module_description": "",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "Graduate Calendar",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "Office Hours",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 3,
                 "module_item_name": "Piazza",
                 "module_item_list": []
             }
@@ -26,24 +29,29 @@
         "module_description": "Understanding Web development basics",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to the course",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Learn What is Web Development",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":2,
                         "name": "Creating a development environment",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":3,
                         "name": "Creating a Web Application",
                         "path": "",
                         "is_link": false
@@ -51,28 +59,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Full Stack Developer - Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Full Stack Developer - Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Web Development",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Week 0",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -88,14 +103,17 @@
         "module_description": "Learn HTML CSS",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to HTML",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Lab",
                         "path": "",
                         "is_link": false
@@ -103,28 +121,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Full Stack Developer - Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Full Stack Developer - Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "HTML",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "CSS",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -140,14 +165,17 @@
         "module_description": "",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "Graduate Calendar",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "Office Hours",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "Piazza",
                 "module_item_list": []
             }
@@ -160,19 +188,23 @@
         "module_description": "Understand Machine Learning",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to the course",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Learn What is Machine Learning",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":2,
                         "name": "Creating a development environment",
                         "path": "",
                         "is_link": false
@@ -180,28 +212,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Machine Learning",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Week 0",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -217,14 +256,17 @@
         "module_description": "Basic model",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Linear Regression",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Lab",
                         "path": "",
                         "is_link": false
@@ -232,28 +274,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Linear Regression",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Python",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -269,14 +318,17 @@
         "module_description": "",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "Graduate Calendar",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "Office Hours",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "Piazza",
                 "module_item_list": []
             }
@@ -289,19 +341,23 @@
         "module_description": "What is algorithms",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to the course",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Learn What is Algorithms",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":2,
                         "name": "Creating a development environment",
                         "path": "",
                         "is_link": false
@@ -309,28 +365,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Algorithms",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Arrays",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -346,14 +409,17 @@
         "module_description": "String datatype",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Strings",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Lab",
                         "path": "",
                         "is_link": false
@@ -361,28 +427,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Array",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "String",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -398,14 +471,17 @@
         "module_description": "",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "Graduate Calendar",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "Office Hours",
                 "module_item_list": []
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "Piazza",
                 "module_item_list": []
             }
@@ -418,19 +494,23 @@
         "module_description": "Java basics",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to the course",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Learn What is PDP",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":2,
                         "name": "Creating a development environment",
                         "path": "",
                         "is_link": false
@@ -438,28 +518,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to Java",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Week 0",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true
@@ -475,14 +562,17 @@
         "module_description": "Grasp OOPs concepts",
         "module_items": [
             {
+                "module_item_id" : 0,
                 "module_item_name": "LEARNING OBJECTIVES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Introduction to OOPs",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Lab",
                         "path": "",
                         "is_link": false
@@ -490,28 +580,35 @@
                 ]
             },
             {
+                "module_item_id" : 1,
                 "module_item_name": "READING",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Chapter 1",
                         "path": "",
                         "is_link": false
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "Chapter 2",
-                        "path": ""
+                        "path": "",
+                        "is_link": false
                     }
                 ]
             },
             {
+                "module_item_id" : 2,
                 "module_item_name": "SLIDES",
                 "module_item_list": [
                     {
+                        "module_item_list_id":0,
                         "name": "Java",
                         "path": "https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit#slide=id.g40a3481019_0_0",
                         "is_link": true
                     },
                     {
+                        "module_item_list_id":1,
                         "name": "OOPs",
                         "path": "https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p",
                         "is_link": true

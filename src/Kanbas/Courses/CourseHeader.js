@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import { Dropdown } from "react-bootstrap";
 import React, { useState } from 'react';
+import { useSelector } from "react-redux";
 
 function CourseHeader() { 
     const { courseId } = useParams();
@@ -12,7 +13,8 @@ function CourseHeader() {
     const segments = fragment.split('/');
     const courseIdx = segments.indexOf(courseId)
     const kanbas_nav_items = db.kanbas_nav_items;
-    const course = db.courses.find((course) => course._id === courseId);
+    const courses = useSelector((state) => state.CourseReducer.courses);
+    const course = courses.find((course) => course._id === courseId);
     const style = {
         position:'absolute',
         inset: '0px 0px auto auto',

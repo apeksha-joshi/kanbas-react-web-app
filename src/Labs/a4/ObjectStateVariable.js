@@ -5,11 +5,12 @@ function ObjectStateVariable() {
     <div>
       <h2>Object State Variables</h2>
       <pre>{JSON.stringify(person, null, 2)}</pre>
-      <input
+      <input className="form-control w-25 m-2"
         value={person.name}
         onChange={(e) => setPerson({ ...person, name: e.target.value })}
       />
-      <input
+      <input className="form-control w-25"
+        type="number"
         value={person.age}
         onChange={(e) => setPerson({ ...person,
                                      age: parseInt(e.target.value) })}

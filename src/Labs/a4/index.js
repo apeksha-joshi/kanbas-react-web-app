@@ -9,6 +9,8 @@ import ObjectStateVariable from "./ObjectStateVariable";
 import ParentStateComponent from "./ParentStateComponent";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
+import ReduxExamples from "./ReduxExamples";
+import TodoList from "./ReduxExamples/todos/TodoList";
 import StringStateVariables from "./StringStateVariables";
 
 const Assignment4 = ()=> {
@@ -30,6 +32,8 @@ const Assignment4 = ()=> {
         <ObjectStateVariable />
         <ArrayStateVariable />
         <ParentStateComponent />
+        <ReduxExamples />
+        <TodoList />
     </>);
 };
 

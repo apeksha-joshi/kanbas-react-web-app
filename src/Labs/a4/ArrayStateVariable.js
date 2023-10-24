@@ -11,7 +11,7 @@ function ArrayStateVariable() {
   return (
     <div>
       <h2>Array State Variable</h2>
-      <button className="btn btn-success" onClick={addElement}>Add Element</button>
+      <button className="btn btn-success m-2" onClick={addElement}>Add Element</button>
       <ul className="list-group">
         {array.map((item, index) => (
           <li key={index} className="list-group-item" style={{ width: '200px' }}>

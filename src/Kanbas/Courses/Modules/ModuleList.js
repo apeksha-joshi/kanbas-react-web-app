@@ -1,5 +1,8 @@
-import { FaCheckCircle, FaEllipsisV, FaGripVertical, FaPlus } from "react-icons/fa";
+import { useState } from "react";
+import { FaCheckCircle, FaEdit, FaEllipsisV, FaGripVertical, FaPlus, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {toggleAddModuleItemForm, toggleHeaderForm, setSelectedModule, setModuleItem, deleteModule, deleteModuleItem} from './ModuleReducer';
+import { useDispatch } from "react-redux";
 
 function ModuleList({module}){
 
@@ -7,8 +10,17 @@ function ModuleList({module}){
         VGrip:<FaGripVertical />,
         Tick:<FaCheckCircle />,
         VEllipsis:<FaEllipsisV />,
-        Plus:<FaPlus />
+        Plus:<FaPlus />,
+        Delete:<FaTrashAlt />,
+        Edit: <FaEdit />,
     }
+
+    // console.log(JSON.stringify(module));
+    const newModuleItem = {
+        module_item_name : "Module Item name",
+        module_item_list : []
+    }
+    const dispatch = useDispatch();
 
     return(
         <>
@@ -30,7 +42,20 @@ function ModuleList({module}){
                                 <i className="tick-icon">{icons['Tick']}</i>
                             </button>
                         </div>
-                        <i className="icon-colors mx-3">{icons['Plus']}</i>&nbsp;
+                        <button className="border-0 icon-btn" onClick={()=> {
+                                                                            dispatch(toggleAddModuleItemForm());
+                                                                            dispatch(setSelectedModule(module));
+                                                                            dispatch(setModuleItem(newModuleItem));
+                                                                        }}><i className="icon-colors mx-3">{icons['Plus']}</i></button>&nbsp;
+                        <button className="border-0 icon-btn" onClick={()=>{    
+                                                                                dispatch(setSelectedModule(module));
+                                                                                dispatch(toggleHeaderForm("edit"));
+                                                                                // dispatch(editModuleHeader(module._id));
+                                                                            }}><i className="icon-colors me-2">{icons['Edit']}</i></button>
+                        
+                        <button className="border-0 icon-btn" onClick={()=>{
+                                                                                dispatch(deleteModule(module._id));
+                                                                            }}><i className="icon-colors me-2">{icons['Delete']}</i></button>
                         <i className="icon-colors me-2">{icons['VEllipsis']}</i>
                     </div>
 
@@ -60,6 +85,15 @@ function ModuleList({module}){
 
                                             <div className="col-3 d-flex list-item-option-icon justify-content-end align-items-center">
                                                 <i className="tick-icon me-4">{icons['Tick']}</i>
+                                                <button className="border-0 icon-btn" onClick={()=>{
+                                                                                dispatch(setSelectedModule(module));
+                                                                                dispatch(setModuleItem(module_item));
+                                                                                dispatch(toggleAddModuleItemForm("edit"));
+                                                                            }}><i className="icon-colors me-2">{icons['Edit']}</i></button>
+                                                <button className="border-0 icon-btn" onClick={()=>{
+                                                                                dispatch(setSelectedModule(module));
+                                                                                dispatch(deleteModuleItem(module_item.module_item_id));
+                                                                            }}><i className="icon-colors me-2">{icons['Delete']}</i></button>
                                                 <i className="icon-colors">{icons['VEllipsis']}</i>
                                             </div>
                                         </div>

@@ -1,11 +1,14 @@
 import KanbasRowContainer from "./KanbasRowContainer";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas(){
     return (
-        <div className="container-fluid main-container">
-            <KanbasRowContainer />
-        </div>
-
+        <Provider store={store}>
+            <div className="container-fluid main-container">
+                <KanbasRowContainer />
+            </div>
+        </Provider>
         
     );
 }
