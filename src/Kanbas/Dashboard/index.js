@@ -43,13 +43,13 @@ function Dashboard(){
             </div>
             <div className="row">
                 <div className="d-flex justify-content-end pe-4">
-                    <button className="btn btn-danger" id="addButton" style={{width:'60px'}} onClick={(e)=>
+                    <button className="btn btn-danger" id="addButton" style={{width:'200px'}} onClick={(e)=>
                                 {
                                     
                                     dispatch(setCourseSelectedBtn("addButton"));
                                     dispatch(setSelectedCourse(newCourse));
                                     dispatch(toggleCourseForm());
-                                }}><FaPlus /></button>
+                                }}><FaPlus /> Add </button>
                 </div>
                 {console.log("clickedBtn: ",courseClickedBtn)}
                 {formVisible && (courseClickedBtn === "addButton" ?

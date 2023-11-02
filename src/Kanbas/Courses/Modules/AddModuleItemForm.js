@@ -55,17 +55,17 @@ function AddModuleItemForm() {
                 })}
 
                 <div className="row d-flex justify-content-center">
-                <button className="btn btn-light" style={{width:'200px'}} onClick={()=>dispatch(addSubModuleEntry())}>Add SubModule</button>
+                <button className="btn btn-dark" style={{width:'200px'}} onClick={()=>dispatch(addSubModuleEntry())}>Add SubModule</button>
                 </div>
 
                 <div className="row d-flex justify-content-center">
                     {
                     moduleItemFormType==="Add"?
-                    <button className="btn btn-light" style={{width:'70px'}} onClick={() => {dispatch(addModuleItemToModules())}}>{moduleItemFormType}</button>:
-                    <button className="btn btn-light" style={{width:'70px'}} onClick={() => {dispatch(editModuleItemInModules())}}>{moduleItemFormType}</button>
+                    <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(addModuleItemToModules())}}>{moduleItemFormType}</button>:
+                    <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(editModuleItemInModules())}}>{moduleItemFormType}</button>
                     }
                     
-                    <button className="btn btn-light ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleAddModuleItemForm())}>Cancel</button>
+                    <button className="btn btn-dark ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleAddModuleItemForm())}>Cancel</button>
                 </div>
 
             </div>

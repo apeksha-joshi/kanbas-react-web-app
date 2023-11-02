@@ -34,11 +34,11 @@ function ModuleHeaderForm() {
                 <div className="row d-flex justify-content-center">
                     {  
                         moduleHeaderFormType === "Add"?
-                        <button className="btn btn-light" style={{width:'70px'}} onClick={() => {dispatch(addModuleHeader())}}>{moduleHeaderFormType}</button> :
-                        <button className="btn btn-light" style={{width:'70px'}} onClick={() => {dispatch(editModuleHeader())}}>{moduleHeaderFormType}</button>
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(addModuleHeader())}}>{moduleHeaderFormType}</button> :
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(editModuleHeader())}}>{moduleHeaderFormType}</button>
                     }
                     
-                    <button className="btn btn-light ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleHeaderForm())}>Cancel</button>
+                    <button className="btn btn-dark ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleHeaderForm())}>Cancel</button>
                 </div>
             </div>  
         </>

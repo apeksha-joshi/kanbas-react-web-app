@@ -104,12 +104,12 @@ function CourseForm({imgPaths, imgColors}) {
             <div className="row d-flex justify-content-center">
                 {console.log("Course Form",clickedBtn)}
                     {clickedBtn === "addButton" ?
-                        <button className="btn btn-light" style={{width:'70px'}} onClick={() => dispatch(addNewCourse())}>Add</button>
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => dispatch(addNewCourse())}>Add</button>
                     :
-                    <button className="btn btn-light" style={{width:'70px'}} onClick={() => dispatch(updateCourse())}>Update</button>
+                    <button className="btn btn-dark" style={{width:'70px'}} onClick={() => dispatch(updateCourse())}>Update</button>
                     }
                     
-                    <button className="btn btn-light ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleCourseForm())}>Cancel</button>
+                    <button className="btn btn-dark ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleCourseForm())}>Cancel</button>
                 
             </div>
         </div>
