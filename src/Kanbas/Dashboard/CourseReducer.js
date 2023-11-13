@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import db from '../Database'
 
 const newCourse = {
     name: "New Course",      number: "New Number", section:"12345",
     startDate: "2023-09-10", endDate: "2023-12-15", semester:"Fall 2023", term:"Full", img_path:"card-2-color"
 }
 const initialState = {
-    courses : db.courses,
+    courses : [],
     course : newCourse,
     courseFormVisible : false,
     courseClickedBtn : "addButton",
@@ -25,6 +24,10 @@ const courseSlice = createSlice({
             state.courseClickedBtn = action.payload;
         },
 
+        setCourses: (state, action) => {
+            state.courses = action.payload;
+        },
+
         setSelectedCourse : (state,action) => {
             if (action.payload.property){
                 const { property, value } = action.payload;
@@ -38,42 +41,40 @@ const courseSlice = createSlice({
             }
         },
 
-        addNewCourse : (state) => {
+        checkCourseExists : (state) => {
             const course_id = state.course.number;
             if (state.courses.find((c)=> c._id === course_id)!==undefined){
-                alert("Course with this number already exists");
+                return { ...state, courseExists: true };
             }else{
-                state.courses = [...state.courses, {
-                    ...state.course, _id: state.course.number,
-                },
-                ];
-                state.courseFormVisible = false;
+                return { ...state, courseExists: false };
             }
-            
         },
 
-        updateCourse : (state) => {
+        addNewCourse : (state) => {          
+            state.courses = [...state.courses, {
+                ...state.course, _id: state.course.number,
+            },
+            ];
+            state.courseFormVisible = false;
+        },
+
+        updateCourseInState : (state, action) => {
+            const updatedCourse = action.payload;
             const updatedCourses = state.courses.map((c) =>
-            c._id === state.course._id ? state.course : c
+            c._id === updatedCourse._id ? updatedCourse : c
             );
-        state.courses = updatedCourses;
+            state.courses = updatedCourses;
         state.courseFormVisible = false;
         },
 
-        deleteCourse : (state, action) => {
+        deleteCourseInState : (state, action) => {
             const courseId = action.payload;
-            const confirmDelete = window.confirm("Are you sure you want to delete this course?");
-            if (confirmDelete) {
-                const updatedCourses = state.courses.filter((c) => c._id !== courseId);
-                state.courses = updatedCourses;
-            }
+            const updatedCourses = state.courses.filter((c) => c._id !== courseId);
+            state.courses = updatedCourses;
         },
-
-
-
     },
 
 });
 
-export const {toggleCourseForm, setSelectedCourse, setCourseSelectedBtn, addNewCourse, updateCourse, deleteCourse} = courseSlice.actions;
+export const {toggleCourseForm, setCourses, setSelectedCourse, setCourseSelectedBtn, addNewCourse, updateCourseInState, deleteCourseInState} = courseSlice.actions;
 export default courseSlice.reducer;

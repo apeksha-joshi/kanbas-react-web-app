@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import DashboardCard from "./DashboardCard";
-import { React } from "react";
+import { React, useEffect } from "react";
 import CourseForm from "./CourseForm";
 import { FaPlus } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import {toggleCourseForm, setCourseSelectedBtn, setSelectedCourse} from './CourseReducer';
+import {toggleCourseForm, setCourseSelectedBtn, setSelectedCourse, setCourses} from './CourseReducer';
+import { getAllCourses } from "../Services/courseServices.js";
 
 function Dashboard(){
     
@@ -12,16 +13,22 @@ function Dashboard(){
         name: "New Course",      number: "New Number", section:"12345",
         startDate: "2023-09-10", endDate: "2023-12-15", semester:"Fall 2023", term:"Full", img_path:"card-2-color"
     }
-    const courses = useSelector((state) => state.CourseReducer.courses);
-    const course = useSelector((state) => state.CourseReducer.course);
-    const formVisible = useSelector((state) => state.CourseReducer.courseFormVisible);
-    const courseClickedBtn = useSelector((state) => state.CourseReducer.courseClickedBtn);
     const dispatch = useDispatch();
 
+    const courses = useSelector((state) => state.CourseReducer.courses);
+    const formVisible = useSelector((state) => state.CourseReducer.courseFormVisible);
+    const courseClickedBtn = useSelector((state) => state.CourseReducer.courseClickedBtn);
     const imgPaths = [...new Set(courses.map(item => item.img_path))];
     const imgColors = ['brown','grey']
 
-    
+
+    useEffect(()=> {
+        (async () => {
+            const coursesData = await getAllCourses();
+            dispatch(setCourses(coursesData));
+        })();  
+    },[]);
+    if(!courses || courses.length === 0) return <></>;
     return (
         <>
             <div className="row">
@@ -51,7 +58,7 @@ function Dashboard(){
                                     dispatch(toggleCourseForm());
                                 }}><FaPlus /> Add </button>
                 </div>
-                {console.log("clickedBtn: ",courseClickedBtn)}
+                
                 {formVisible && (courseClickedBtn === "addButton" ?
                             <CourseForm imgPaths={imgPaths} imgColors={imgColors}/>
                         :

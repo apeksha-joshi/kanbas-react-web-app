@@ -1,14 +1,15 @@
 import { FaBan, FaBell, FaBullhorn, FaCalendar, FaChartBar, FaCheckCircle, FaCrosshairs, FaEllipsisV, FaPlus, FaSignOutAlt } from "react-icons/fa";
 import ModuleList from "../Modules/ModuleList";
-import db from "../../Database";
 import ModuleHeaderForm from "../Modules/ModuleHeaderForm";
-import AddModuleItemForm from '../Modules/AddModuleItemForm';
-import {toggleHeaderForm, addModuleHeader, setSelectedModule} from '../Modules/ModuleReducer';
+import {toggleHeaderForm, setSelectedModule} from '../Modules/ModuleReducer';
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import {getCourseTasks} from '../../Services/moduleServices.js';
+import { useEffect, useState } from "react";
 
 function Home() {
+
     const icons = {
         Tick:<FaCheckCircle />,
         Plus:<FaPlus />,
@@ -33,13 +34,25 @@ function Home() {
     const addModuleItemForm = useSelector((state)=> state.ModuleReducer.addModuleItemForm);
     const moduleHeaderForm = useSelector((state) => state.ModuleReducer.moduleHeaderForm);
     const course_modules = modules_json.filter((module) => module.course_id===courseId);
-    const courseTasks = db.course_tasks.find((task) => task.course_id===courseId);
-    console.log("Course Tasks", courseTasks);
+    const [courseTasks, setCourseTasks] = useState([]);
+   
     const courses = useSelector((state) => state.CourseReducer.courses);
     const course = courses.find((course) => course._id === courseId);
     const dispatch = useDispatch();
+
+    useEffect(()=> {
+        (async () => {
+            try{
+                const course_tasks = await getCourseTasks(courseId);
+                setCourseTasks(course_tasks);
+            }catch(error){
+                console.log("Error fetching data", error);
+            }
+        })(); 
+    },[]);
     return(
         <>
+            
             <div className="col-12 col-lg-10 col-xl-7">
                 <div className="row pe-3 my-2">
                     <div className="btn-grp-row">
@@ -72,7 +85,6 @@ function Home() {
 
                         {moduleHeaderForm && (<ModuleHeaderForm />)}
 
-                        {addModuleItemForm && (<AddModuleItemForm />)}
 
                         {/* ModuleList */}
                         {
@@ -119,15 +131,15 @@ function Home() {
                 
 
                 {
-                courseTasks!==undefined?
-                    courseTasks.todos.length > 0 &&(
+                courseTasks!==undefined && courseTasks.length !== 0?
+                    courseTasks[0].todos.length > 0 &&(
                         <div className="row ps-3">
                             <div className="col set-position">
                                 <h5 className="fw-bold">To Do</h5>
                             </div>
                             <hr className="pe-3" />
                             <ol className="list-group">
-                                {courseTasks.todos.map((task) => {
+                                {courseTasks[0].todos.map((task) => {
                                     return (
                                         <li key={task._id} className="list-group-item d-flex todo justify-content-between align-items-start">
                                             <span className="badge bg-danger rounded-circle">{task.count}</span>
@@ -146,29 +158,6 @@ function Home() {
                     null
                 }
                 
-                {/* {courseTasks.todos.length > 0 &&(
-                    <div className="row ps-3">
-                        <div className="col set-position">
-                            <h5 className="fw-bold">To Do</h5>
-                        </div>
-                        <hr className="pe-3" />
-                        <ol className="list-group">
-                            {courseTasks.todos.map((task) => {
-                                return (
-                                    <li key={task._id} className="list-group-item d-flex todo justify-content-between align-items-start">
-                                        <span className="badge bg-danger rounded-circle">{task.count}</span>
-                                        <div className="ms-2 me-auto">
-                                            <div className="fw-light"><Link to={task.path}>{task.name}</Link></div>
-                                            <small>{task.points} points | {task.date}</small>
-                                        </div>
-                                    </li>
-                                )
-                            })
-                            }
-                            
-                        </ol>
-                    </div>
-                )} */}
                 
 
                 <div className="row ps-3 mt-1">
@@ -176,9 +165,10 @@ function Home() {
                         <h5 className="fw-bold">Coming Up</h5>
                     </div>
                     {
-                        courseTasks!==undefined?
-                            (<div className="col set-position float-end">
-                                <p><Link to={courseTasks.upcoming.calendar}><i className="far fa-sm icon-colors me-1">{icons['Calendar']}</i>View Calendar</Link></p>
+                        courseTasks!==undefined && courseTasks.length !==0?
+                            (
+                            <div className="col set-position float-end">
+                                <p><Link to={courseTasks[0].upcoming.calendar}><i className="far fa-sm icon-colors me-1">{icons['Calendar']}</i>View Calendar</Link></p>
                             </div>):
                             null
                     }
@@ -187,9 +177,9 @@ function Home() {
                 </div>
 
                 {
-                courseTasks!==undefined?
-                    courseTasks.upcoming.upcoming_items.length > 0 && (
-                        courseTasks.upcoming.upcoming_items.map((upcoming_item) => {
+                courseTasks!==undefined && courseTasks.length !==0?
+                    courseTasks[0].upcoming.upcoming_items.length > 0 && (
+                        courseTasks[0].upcoming.upcoming_items.map((upcoming_item) => {
                             return (<div key={upcoming_item._id} className="row px-3">
                                 <div className="d-flex float-end upcoming-item">
                                     <i className="far icon-colors me-1">{icons['Calendar']}</i>
@@ -207,25 +197,6 @@ function Home() {
                     ):
                     null
                 }
-
-                {/* {courseTasks.upcoming.upcoming_items.length > 0 && (
-                    courseTasks.upcoming.upcoming_items.map((upcoming_item) => {
-                        return (<div key={upcoming_item._id} className="row px-3">
-                            <div className="d-flex float-end upcoming-item">
-                                <i className="far icon-colors me-1">{icons['Calendar']}</i>
-                                <div className="ps-3">
-                                    <Link to={upcoming_item.path} className="ps-3">{upcoming_item.name}</Link><br />
-                                    <small className="ps-3">{`${course.number}.${course.section}.${course.startDate.split('-')[0]}${course.startDate.split('-')[2]}`}</small><br />
-                                    <small className="ps-3">{upcoming_item.date}</small>
-                                </div>
-                            </div>
-                        </div>)
-                    }
-
-                    )
-                    
-                )} */}
-                
                 
             </div>
         </>

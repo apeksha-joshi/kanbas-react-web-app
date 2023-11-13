@@ -9,6 +9,8 @@ import './Courses/Assignments/assignment-style.css'
 import './Courses/Grades/grade-style.css';
 import './style.css';
 import useMediaQuery from './Hooks';
+import { useEffect, useState } from "react";
+import {getAllKanbasItems} from './Services/navServices.js';
 
 function KanbasRowContainer(){
     const fragment = window.location.hash;
@@ -19,17 +21,23 @@ function KanbasRowContainer(){
           marginTop: applyquery ? '60px' : '0'
         })
       };
-    const { pathname } = useLocation();
-    
+    const [nav_items, setNavItems] = useState([]);
+
+    useEffect(()=> {
+        (async () => {
+            const kanbasNavItems = await getAllKanbasItems();
+            setNavItems(kanbasNavItems);
+        })();  
+    },[]);
+    if(!nav_items || nav_items.length === 0) return <></>;
     return(
         <div className="row main-row-container" style={styles.container(applyquery)} >
-            <KanbasNavigation />
+            <KanbasNavigation nav_items={nav_items}/>
             <div className="col pb-2 page-content">
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<h1>Account</h1>} />
                     <Route path="Dashboard" element={<Dashboard />} />
-                    <Route path="Courses" element={console.log("Courses only")} />
                     <Route path="Courses/:courseId/*" element={<Courses />} />
                 </Routes>
                 

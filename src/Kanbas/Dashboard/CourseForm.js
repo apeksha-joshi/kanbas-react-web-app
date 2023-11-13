@@ -1,10 +1,14 @@
-import {toggleCourseForm, setSelectedCourse, addNewCourse, updateCourse} from './CourseReducer';
+import {toggleCourseForm, setSelectedCourse} from './CourseReducer';
 import { useSelector, useDispatch } from "react-redux";
+import useCourseActions from "./actions/useCourseActions.js";
 
 function CourseForm({imgPaths, imgColors}) {
     const selected_course = useSelector((state) => state.CourseReducer.course);
     const clickedBtn = useSelector((state) => state.CourseReducer.courseClickedBtn);
     const dispatch = useDispatch();
+    const {addCourse, updateCourse} = useCourseActions();
+
+
     return(
         <div className="courseForm">
             <h4 className="form-label d-flex justify-content-center">Course Details</h4>
@@ -102,11 +106,10 @@ function CourseForm({imgPaths, imgColors}) {
             </div>
 
             <div className="row d-flex justify-content-center">
-                {console.log("Course Form",clickedBtn)}
                     {clickedBtn === "addButton" ?
-                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => dispatch(addNewCourse())}>Add</button>
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => addCourse(selected_course)}>Add</button>
                     :
-                    <button className="btn btn-dark" style={{width:'70px'}} onClick={() => dispatch(updateCourse())}>Update</button>
+                    <button className="btn btn-dark" style={{width:'70px'}} onClick={() => updateCourse(selected_course)}>Update</button>
                     }
                     
                     <button className="btn btn-dark ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleCourseForm())}>Cancel</button>

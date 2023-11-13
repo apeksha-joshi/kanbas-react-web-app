@@ -1,24 +1,26 @@
 import { FaBars, FaBook, FaBullhorn, FaBullseye, FaCalendarAlt, FaChevronDown, FaCircleNotch, FaClipboard, FaClock, FaCog, FaComments, FaEdit, FaEnvelopeOpenText, FaFileAlt, FaFolder, FaGlasses, FaHome, FaMendeley, FaPlug, FaQuestionCircle, FaRocket, FaSignOutAlt, FaTachometerAlt, FaTv, FaUser, FaUserFriends } from "react-icons/fa";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import db from "../Database";
 import { Dropdown } from "react-bootstrap";
-import React, { useState } from 'react';
-import { useSelector } from "react-redux";
 
-function CourseHeader() { 
+
+function CourseHeader(data) { 
     const { courseId } = useParams();
-    const course_nav_items = db.course_nav;
+
+    const course = data.course
+    const kanbas_nav_items = data.kanbas_nav_items;
+    const course_nav_items = data.course_items
+
     const fragment = window.location.hash;
     const segments = fragment.split('/');
     const courseIdx = segments.indexOf(courseId)
-    const kanbas_nav_items = db.kanbas_nav_items;
-    const courses = useSelector((state) => state.CourseReducer.courses);
-    const course = courses.find((course) => course._id === courseId);
+
+
     const style = {
         position:'absolute',
         inset: '0px 0px auto auto',
         transform: 'translate3d(-280.8px, 48px, 0px)'}
+
     const icons = {
         Menu : <FaBars size="1.4em" />,
         Down:<FaChevronDown />,
@@ -55,7 +57,9 @@ function CourseHeader() {
         Syllabus:<FaFileAlt />,
         Settings:<FaCog />,
     }
+
     return(
+        
         <>
             {fragment.includes("Dashboard")? 
             null :

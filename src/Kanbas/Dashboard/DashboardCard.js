@@ -1,6 +1,7 @@
 import { FaEdit, FaEllipsisV, FaTrashAlt } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import {toggleCourseForm, setCourseSelectedBtn, setSelectedCourse, addNewCourse, updateCourse, deleteCourse} from './CourseReducer';
+import {toggleCourseForm, setCourseSelectedBtn, setSelectedCourse} from './CourseReducer';
+import useCourseActions from "./actions/useCourseActions.js";
 
 function DashboardCard({course_item}) {
 
@@ -10,7 +11,7 @@ function DashboardCard({course_item}) {
         Delete:<FaTrashAlt />
     }
     const dispatch = useDispatch();
-
+    const {deleteCourse} = useCourseActions();
     return(
         <div className="col card-style">
             <div className="card">
@@ -36,7 +37,7 @@ function DashboardCard({course_item}) {
                             className="edit-icon"
                             onClick={(e) => {
                                 e.preventDefault();
-                                dispatch(deleteCourse(course_item._id));
+                                deleteCourse(course_item._id);
                             }}>
                             <i className="delete-icon">{cardIcons['Delete']}</i></button>
                     </div>

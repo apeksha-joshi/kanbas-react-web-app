@@ -1,11 +1,9 @@
 import { useParams } from "react-router";
 import ModuleList from "./ModuleList";
 import { FaCheckCircle, FaEllipsisV, FaPlus } from "react-icons/fa";
-import { useState } from "react";
 import ModuleHeaderForm from "./ModuleHeaderForm";
-import AddModuleItemForm from './AddModuleItemForm';
 import { useDispatch, useSelector } from "react-redux";
-import {toggleHeaderForm, addModuleHeader, setSelectedModule} from './ModuleReducer';
+import {toggleHeaderForm,  setSelectedModule} from './ModuleReducer';
 
 function Modules(){
     const icons = {
@@ -14,39 +12,16 @@ function Modules(){
         VEllipsis:<FaEllipsisV />
     }
     const {courseId} = useParams();
-    // const [modules, setModules] = useState(db.modules);
     const newModuleVal = {
         course_id:courseId,
         module_header:"Enter Module Header",
-        module_description : "Enter Module Description",
-        module_items :[]
+        module_description : "Enter Module Description"
     }
 
     const modules = useSelector((state) => state.ModuleReducer.modules);
     const moduleHeaderForm = useSelector((state) => state.ModuleReducer.moduleHeaderForm);
-    const newModule = useSelector((state) => state.ModuleReducer.module);
-    const addModuleItemForm = useSelector((state)=> state.ModuleReducer.addModuleItemForm);
     const dispatch = useDispatch();
-    // const [newModule, setNewModule] = useState(newModuleVal);
-
-    // const [moduleHeaderForm, setModuleHeaderForm] = useState(false);
-
-    // const toggleHeaderForm = () => {
-    //     console.log("Inside toggle");
-    //     setModuleHeaderForm(!moduleHeaderForm);
-    // } 
-
     const course_modules = modules.filter((module) => module.course_id===courseId);
-    
-    // const addModuleHeader = () => {
-    //     const newModule_id = `${courseId}_M${modules.length+1}`
-    //     setModules([...modules,
-    //         { ...newModule,
-    //         _id: newModule_id }]);
-    
-    //     toggleHeaderForm();
-    // }
-
 
 
     return (
@@ -83,7 +58,6 @@ function Modules(){
 
                         {moduleHeaderForm && (<ModuleHeaderForm />)}
 
-                        {addModuleItemForm && (<AddModuleItemForm />)}
 
                         {/* ModuleList */}
                         {

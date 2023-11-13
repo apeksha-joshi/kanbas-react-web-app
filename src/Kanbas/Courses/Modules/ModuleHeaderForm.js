@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import {toggleHeaderForm, addModuleHeader, setSelectedModule, editModuleHeader} from './ModuleReducer';
+import {toggleHeaderForm, setSelectedModule} from './ModuleReducer';
+import useModuleActions from "./actions/useModuleActions";
 
 function ModuleHeaderForm() {
     const selected_module = useSelector((state) => state.ModuleReducer.module);
     const moduleHeaderFormType = useSelector((state) => state.ModuleReducer.moduleHeaderFormType);
     const dispatch = useDispatch();
+    const {addModule, updateModule} = useModuleActions();
 
     return(
         <>
@@ -34,8 +36,8 @@ function ModuleHeaderForm() {
                 <div className="row d-flex justify-content-center">
                     {  
                         moduleHeaderFormType === "Add"?
-                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(addModuleHeader())}}>{moduleHeaderFormType}</button> :
-                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {dispatch(editModuleHeader())}}>{moduleHeaderFormType}</button>
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {addModule(selected_module)}}>{moduleHeaderFormType}</button> :
+                        <button className="btn btn-dark" style={{width:'70px'}} onClick={() => {updateModule(selected_module)}}>{moduleHeaderFormType}</button>
                     }
                     
                     <button className="btn btn-dark ms-3" style={{width:'70px'}} onClick={() => dispatch(toggleHeaderForm())}>Cancel</button>

@@ -1,13 +1,9 @@
-import { Link, useLocation, useParams } from "react-router-dom";
-import db from "../../Database";
-import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
-function CourseNavigation() {
-    const { courseId } = useParams();
+function CourseNavigation(data) {
     const { pathname } = useLocation();
-    const course_items = db.course_nav;
-    const courses = useSelector((state) => state.CourseReducer.courses);
-    const course = courses.find((course) => course._id === courseId);
+    const course_items = data.course_items;
+    const course = data.course;
     const year_mth = `${course.startDate.split('-')[0]}${course.startDate.split('-')[2]}`;
     const fixed_value = `${year_mth}_${course.semester.split(' ')[0]}_${course.semester.split(' ')[1]}`;
     return(
