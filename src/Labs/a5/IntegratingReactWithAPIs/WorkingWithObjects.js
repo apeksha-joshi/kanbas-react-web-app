@@ -1,4 +1,4 @@
-import axios from "axios";
+import httpClient from '../httpClientConfig.js';
 import { useEffect, useState } from "react";
 
 function WorkingWithObjects(){
@@ -12,12 +12,12 @@ function WorkingWithObjects(){
     });
     const URL = "http://localhost:4000/a5/assignment";
     const fetchAssignment = async() => {
-        const response = await axios.get(`${URL}`);
+        const response = await httpClient.get(`/a5/assignment`);
         setAssignment(response.data);
     };
     const updateTitle = async () => {
-        const response = await axios
-          .get(`${URL}/title/${assignment.title}`);
+        const response = await httpClient
+          .get(`/a5/assignment/title/${assignment.title}`);
         setAssignment(response.data);
     };
     useEffect(() => {

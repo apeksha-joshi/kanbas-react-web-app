@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
+import httpClient from '../httpClientConfig.js';
 
 function EncodingParametersInURLS(){
     const [a, setA] = useState(34);
@@ -7,17 +7,17 @@ function EncodingParametersInURLS(){
     const [result, setResult] = useState(0);
     const [welcome, setWelcome] = useState("");
     const fetchWelcome = async () => {
-    const response = await axios.get("http://localhost:4000/a5/welcome");
+    const response = await httpClient.get("/a5/welcome");
         setWelcome(response.data);
     };
 
     const fetchSum  = async () => {
-        const response = await axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+        const response = await httpClient.get(`/a5/add/${a}/${b}`);
         setResult(response.data);
     };
 
     const fetchDiff  = async () => {
-        const response = await axios.get(`http://localhost:4000/a5/subtract/${a}/${b}`);
+        const response = await httpClient.get(`/a5/subtract/${a}/${b}`);
         setResult(response.data);
     };
 

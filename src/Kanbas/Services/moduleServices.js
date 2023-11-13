@@ -2,7 +2,7 @@ import httpClient from './index.js';
 
 export const getCourseModules = async(courseId) => {
     try{
-        const {data} = await httpClient.get(`courses/${courseId}/modules`);
+        const {data} = await httpClient.get(`/api/courses/${courseId}/modules`);
         return data;
     }catch(error){
         throw new Error("Internal server error");
@@ -12,7 +12,7 @@ export const getCourseModules = async(courseId) => {
 
 export const getCourseTasks = async(courseId) => {
     try{
-        const {data} = await httpClient.get(`courses/${courseId}/tasks`);
+        const {data} = await httpClient.get(`/api/courses/${courseId}/tasks`);
         return data;
     }catch(error){
         throw new Error("Internal server error");
@@ -21,7 +21,7 @@ export const getCourseTasks = async(courseId) => {
 
 export const createModule = async (courseId, module) => {
     try{
-        const response = await httpClient.post(`courses/${courseId}/modules`, module);
+        const response = await httpClient.post(`/api/courses/${courseId}/modules`, module);
         return response;
     }catch(error){
         throw new Error("Internal server error");
@@ -30,7 +30,7 @@ export const createModule = async (courseId, module) => {
 
 export const deleteModuleDb = async (moduleId) => {
     try{
-        const response = await httpClient.delete(`modules/${moduleId}`);
+        const response = await httpClient.delete(`/api/modules/${moduleId}`);
         return response.status;
     }catch(error){
         throw new Error(error.response.status);
@@ -39,7 +39,7 @@ export const deleteModuleDb = async (moduleId) => {
 
 export const updateModuleDb = async (module) => {
     try{
-        const response = await httpClient.put(`modules/${module._id}`, module);
+        const response = await httpClient.put(`/api/modules/${module._id}`, module);
         return response.status;
     }catch(error){
         throw new Error(error.response.status);

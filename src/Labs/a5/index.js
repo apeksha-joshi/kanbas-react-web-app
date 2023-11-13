@@ -2,13 +2,15 @@ import EncodingParametersInURLs from "./EncodingParametersInURLs";
 import IntegratingReactWithAPIs from "./IntegratingReactWithAPIs";
 import WorkingWithArrays from "./WorkingWithArrays";
 import WorkingWithObjects from "./WorkingWithObjects";
+import httpClient from './httpClientConfig.js';
 
 function Assignment5() {
+    const baseURL = httpClient.defaults.baseURL;
     return (
       <div>
         <h1>Assignment 5</h1>
         <div className="list-group">
-          <a href="http://localhost:4000/a5/welcome"
+          <a href= {`${baseURL}/a5/welcome`}
              className="list-group-item">
             Welcome
           </a>

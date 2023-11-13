@@ -1,0 +1,106 @@
+[
+    {
+        
+        "course_id":"CS5610",
+        "todos" :[
+            {
+                "_id":"T1",
+                "count": 1,
+                "name": "Grade A1 - ENV + HTML",
+                "path": "",
+                "points": 100,
+                "date": "Sep 18 11:59pm"
+            }
+        ],
+        "upcoming": {
+            "calendar" : "",
+            "upcoming_items" : [
+                {
+                    "_id":"I1",
+                    "name":"Lecture",
+                    "course_section":"CS5610.17387.202410",
+                    "date": "Sep 18 11:59pm",
+                    "path":""
+                }
+            ]
+        }
+    },
+
+    {
+        "course_id":"CS6140",
+        "todos" :[
+            {
+                "_id":"T1",
+                "count": 1,
+                "name": "Grade A1 - Python",
+                "path": "",
+                "points": 100,
+                "date": "Sep 18 11:59pm"
+            }
+        ],
+        "upcoming": {
+            "calendar" : "",
+            "upcoming_items" : [
+                {
+                    "_id":"I1",
+                    "name":"Lecture",
+                    "course_section":"CS6140.17387.202410",
+                    "date": "Sep 18 11:59pm",
+                    "path":""
+                }
+            ]
+        }
+    },
+
+    {
+        "course_id":"CS5800",
+        "todos" :[
+            {
+                "_id":"T1",
+                "count": 1,
+                "name": "Grade A1 - Arrays",
+                "path": "",
+                "points": 100,
+                "date": "Sep 18 11:59pm"
+            }
+        ],
+        "upcoming": {
+            "calendar" : "",
+            "upcoming_items" : [
+                {
+                    "_id":"I1",
+                    "name":"Lecture",
+                    "course_section":"CS5800.17387.202410",
+                    "date": "Sep 18 11:59pm",
+                    "path":""
+                }
+            ]
+        }
+    },
+
+    {
+        "course_id":"CS5010",
+        "todos" :[
+            {
+                "_id":"T1",
+                "count": 1,
+                "name": "Grade A1 - Java",
+                "path": "",
+                "points": 100,
+                "date": "Sep 18 11:59pm"
+            }
+        ],
+        "upcoming": {
+            "calendar" : "",
+            "upcoming_items" : [
+                {
+                    "_id":"I1",
+                    "name":"Lecture",
+                    "course_section":"CS5610.17387.202410",
+                    "date": "Sep 18 11:59pm",
+                    "path":""
+                }
+            ]
+        }
+    }
+]

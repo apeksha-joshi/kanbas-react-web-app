@@ -2,7 +2,7 @@ import httpClient from './index.js';
 
 export const getAllCourses = async() => {
     try{
-        const {data} = await httpClient.get("courses");
+        const {data} = await httpClient.get("/api/courses");
         return data;
     }catch(error){
         console.log(error);
@@ -11,7 +11,7 @@ export const getAllCourses = async() => {
 
 export const addCourseDb = async (course) => {
     try{
-        const response = await httpClient.post("courses", course);
+        const response = await httpClient.post("/api/courses", course);
         return response;
     }catch(error){
         throw Error(error.response.data);
@@ -20,7 +20,7 @@ export const addCourseDb = async (course) => {
 
 export const deleteCourseDb = async (courseId) => {
     try{
-        const response = await httpClient.delete(`courses/${courseId}`);
+        const response = await httpClient.delete(`/api/courses/${courseId}`);
         return response.status;
     }catch(error){
         throw new Error(error.response.status);
@@ -29,7 +29,7 @@ export const deleteCourseDb = async (courseId) => {
 
 export const updateCourseDb = async (course) => {
     try{
-        const response = await httpClient.put(`courses/${course._id}`, course);
+        const response = await httpClient.put(`/api/courses/${course._id}`, course);
         return response.status;
     }catch(error){
         throw new Error(error.response.status);
@@ -38,7 +38,7 @@ export const updateCourseDb = async (course) => {
 
 export const getCourseDb = async (courseId) => {
     try{
-        const response = await httpClient.get(`courses/${courseId}`);
+        const response = await httpClient.get(`/api/courses/${courseId}`);
         return response.data;
     }catch(error){
         throw new Error(error.response.status);

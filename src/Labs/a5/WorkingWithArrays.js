@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import httpClient from './httpClientConfig.js';
 
 function WorkingWithArrays() {
-    const API = "http://localhost:4000/a5/todos";
+    const baseURL = httpClient.defaults.baseURL;
+    const API = `${baseURL}/a5/todos`;
     const [todo, setTodo] = useState({
         id: 1,
         title: "NodeJS Assignment",
@@ -24,6 +26,29 @@ function WorkingWithArrays() {
       <div>
         <h3>Working with Arrays</h3>
 
+        <h4>Retrieving Arrays</h4>
+        <a href={API} className="btn btn-primary me-2">
+          Get Todos
+        </a>
+
+        <h4>Retrieving an Item from an Array by ID</h4>
+      <input
+        className="form-control"
+        value={id}
+        onChange={(e) => setId(parseInt(e.target.value))}/>
+
+        
+      <a href={`${API}/${parseInt(todo.id)}`}
+         className="btn btn-primary me-2">
+        Get Todo by ID
+      </a>
+
+        <h3>Filtering Array Items</h3>
+        <a href={`${API}?completed=true`}
+            className="btn btn-primary me-2" >
+            Get Completed Todos
+        </a>
+        
         <input
         value={todo.id}
         onChange={(e) => setTodo({
@@ -53,6 +78,7 @@ function WorkingWithArrays() {
             <option value={true}>True</option>
             <option value={false}>False</option>
         </select>
+
       <h3>Updating an Item in an Array</h3>
       <a
         href={`${API}/${todo.id}/title/${todo.title}`}
@@ -71,34 +97,14 @@ function WorkingWithArrays() {
         className="btn btn-primary me-2" >
         Update Status to {todo.completed}
       </a>
+      
       <h3>Deleting from an Array</h3>
       <a href={`${API}/${todo.id}/delete`}
          className="btn btn-primary me-2">
         Delete Todo with ID = {todo.id}
       </a>
 
-        <h4>Retrieving Arrays</h4>
-        <a href={API} className="btn btn-primary me-2">
-          Get Todos
-        </a>
-
-        <h4>Retrieving an Item from an Array by ID</h4>
-      <input
-        className="form-control"
-        value={id}
-        onChange={(e) => setId(parseInt(e.target.value))}/>
-
         
-      <a href={`${API}/${parseInt(todo.id)}`}
-         className="btn btn-primary me-2">
-        Get Todo by ID
-      </a>
-
-        <h3>Filtering Array Items</h3>
-        <a href={`${API}?completed=true`}
-            className="btn btn-primary me-2" >
-            Get Completed Todos
-        </a>
 
         <h4>Creating new Items in an Array</h4>
         <a href={`${API}/create`}

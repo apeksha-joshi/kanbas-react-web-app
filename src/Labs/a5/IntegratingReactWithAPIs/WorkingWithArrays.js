@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import httpClient from '../httpClientConfig.js';
 function WorkingWithArrays() {
-  const API = "http://localhost:4000/a5/todos";
+  //const API = "http://localhost:4000/a5/todos";
   const [errorMessage, setErrorMessage] = useState(null);
   const [todo, setTodo] = useState({
     id: 1, title: "NodeJS Assignment",
@@ -11,25 +11,25 @@ function WorkingWithArrays() {
   const [todos, setTodos] = useState([]);
 
   const fetchTodos = async () => {
-    const response = await axios.get(API);
+    const response = await httpClient.get("/a5/todos");
     setTodos(response.data);
   };
 
   const postTodo = async () => {
-    const response = await axios.post(API, todo);
+    const response = await httpClient.post("/a5/todo", todo);
     setTodos([...todos, response.data]);
   };
 
 
   const removeTodo = async (todo) => {
-    const response = await axios
-      .get(`${API}/${todo.id}/delete`);
+    const response = await httpClient
+      .get(`/a5/todos/${todo.id}/delete`);
     setTodos(response.data);
   };
 
   const deleteTodo = async (todo) => {
     try{
-        const response = await axios.delete(`${API}/${todo.id}`);
+        const response = await httpClient.delete(`/a5/todos/${todo.id}`);
         setTodos(todos.filter((t) => t.id !== todo.id));
     }catch(error) {
         console.log(error);
@@ -39,19 +39,19 @@ function WorkingWithArrays() {
   };
 
   const fetchTodoById = async (id) => {
-    const response = await axios.get(`${API}/${id}`);
+    const response = await httpClient.get(`/a5/todos/${id}`);
     setTodo(response.data);
   };
 
   const updateTitle = async () => {
-    const response = await axios.get(
-      `${API}/${todo.id}/title/${todo.title}`);
+    const response = await httpClient.get(
+      `/a5/todos/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
   };
 
   const updateTodo = async () => {
     try{
-        const response = await axios.put(`${API}/${todo.id}`, todo);
+        const response = await httpClient.put(`/a5/todos/${todo.id}`, todo);
         setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));setTodo({});
     }catch(error){
         console.log(error);
