@@ -63,7 +63,7 @@ function WorkingWithArrays() {
 
   useEffect(() => {
     fetchTodos();
-  }, [todos]);
+  }, []);
   return (
     <div>
       <h2>Working with Arrays</h2>
