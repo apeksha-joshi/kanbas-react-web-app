@@ -16,7 +16,7 @@ function WorkingWithArrays() {
   };
 
   const postTodo = async () => {
-    const response = await httpClient.post("/a5/todo", todo);
+    const response = await httpClient.post("/a5/todos", todo);
     setTodos([...todos, response.data]);
   };
 
