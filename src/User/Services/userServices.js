@@ -18,7 +18,6 @@ export const getAccount = async () => {
 
 export const updateUserDB = async (user) => {
     const response = await httpClient.put(`${USERS_API}/${user._id}`, user);
-    console.log("update User",response.data)
     return response.data;
 }
 
