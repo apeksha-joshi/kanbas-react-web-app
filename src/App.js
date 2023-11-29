@@ -5,6 +5,7 @@ import Labs from './Labs';
 import HellowWorld from './Labs/a3/HelloWorld';
 import { HashRouter } from 'react-router-dom';
 import {Routes, Route, Navigate} from 'react-router';
+import User from './User';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/hello" element={<HellowWorld/>} />
           <Route path="/Labs/*" element={<Labs/>} />
           <Route path="/Kanbas/*" element={<Kanbas/>} />
+          <Route path="/User/*" element={<User/>} />
         </Routes>
       </div>
     </HashRouter>

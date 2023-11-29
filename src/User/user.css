@@ -1,0 +1,19 @@
+.user-nav-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.user-nav-item.active-item{
+    background-color: black;
+}
+
+.user-nav-item.active-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 600px;
+}
