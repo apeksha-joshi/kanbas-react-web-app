@@ -10,6 +10,7 @@ function Account(){
     const navigate = useNavigate();
     const fetchAccount = async () => {
         const account = await getAccount();
+        console.log(account)
         setAccount(account);
     };
 
@@ -68,7 +69,7 @@ function Account(){
                             email: e.target.value
                         })} />
                     <label htmlFor="role" className="form-label ms-2">Role:</label>
-                    <select className="form-select m-2" id="role" onChange={(e) => setAccount({
+                    <select className="form-select m-2" id="role" value={account.role} onChange={(e) => setAccount({
                         ...account,
                         role: e.target.value
                     })}>

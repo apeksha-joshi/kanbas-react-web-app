@@ -3,12 +3,12 @@ import httpClient from './index.js'
 const USERS_API = `/api/users`
 
 export const signin = async (credentials) => {
-    try{
+    // try{
         const response = await httpClient.post(`${USERS_API}/signin`, credentials);
         return response.data;
-    }catch(error){
-        throw new Error("Internal server error");
-    }
+    // }catch(error){
+    //     throw new Error("Internal server error");
+    // }
 }
 
 export const getAccount = async () => {
@@ -28,6 +28,9 @@ export const findAllUsers = async () => {
 
 export const createUser = async (user) => {
     const response = await httpClient.post(`${USERS_API}`, user);
+    if(response.status === 400){
+        return response.status;
+    }
     return response.data;
 }
 

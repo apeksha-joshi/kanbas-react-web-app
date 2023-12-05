@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Admin(){
     const [users, setUsers] = useState([]);
-    
+    const [error, setError] = useState("");
     const fetchUsers = async () => {
         const users = await findAllUsers();
         setUsers(users);
@@ -20,6 +20,7 @@ function Admin(){
             setUsers([newUser, ...users]);
         } catch (err) {
             console.log(err);
+            setError(err.response.data.message);
         }
     };
 
@@ -38,6 +39,7 @@ function Admin(){
             setUsers(users.map((u)=> (u._id === user._id ? user : u)));
         }catch(err){
             console.log(err);
+            setError(err.response.data.message);
         }
     }
     const deleteUser = async (user) => {
@@ -58,6 +60,7 @@ function Admin(){
     return (
         <div className="col-10">
             <h1>Users List</h1>
+            {error && <div>{error}</div>}
             <div className='table-responsive'>
             <table className="table">
                 <thead>
